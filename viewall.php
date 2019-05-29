@@ -35,10 +35,15 @@ $query = $conn->query($sql);
 <td><?php echo $row['price']; ?></td>
 <td><?php echo $row['memory']; ?></td>
 <td> <button><a href="delete.php?id=<?=$row['id']?>">Delete</a></button></td>
+<td> <button><a href="updatepage.php?id=<?=$row['id']?>">Edit</a></button></td>
 </tr>
 
 <?php } ?>
 
 </table>
+
+<br>
+<a href="index.php">Back to main page</a>
+
 </body>
 </html>
