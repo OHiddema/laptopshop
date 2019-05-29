@@ -12,7 +12,7 @@ Customers must be able to search for their perfect laptop, using criteria filter
 Administrators must be able to add, delete and update the data.
 
 Steps to undertake:
-[x] use the database created in the previous repo
-[ ] connect to the database
-[ ] start with administrator interface:
-   - create a form insert a record into the table
+[X] use the database created in the previous repo
+[X] connect to the database
+start with administrator interface:
+   [X] create a form insert a record into the table
