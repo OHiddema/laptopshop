@@ -15,4 +15,9 @@ Steps to undertake:
 [X] use the database created in the previous repo
 [X] connect to the database
 start with administrator interface:
-   [X] create a form insert a record into the table
+   [X] create a form to insert a record into the table
+   [ ] create a page to delete record from the table
+   [ ] create a page to update a record from the table
+
+[ ] To be able to delete a record, we have first have to select a record.
+[X] To select a record, we first have to fetch the records.
