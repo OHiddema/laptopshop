@@ -21,3 +21,4 @@ start with administrator interface:
 
 [ ] To be able to delete a record, we have first have to select a record.
 [X] To select a record, we first have to fetch the records.
+[ ] Create two buttons for each record in HTML to delete or update the record.

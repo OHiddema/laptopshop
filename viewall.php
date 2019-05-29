@@ -19,7 +19,10 @@ $query = $conn->query($sql);
 <table border ="2">
 <tr>
 <th>id</th>
+<th>brand</th>
 <th>name</th>
+<th>price</th>
+<th>memory</th>
 </tr>
 
 
