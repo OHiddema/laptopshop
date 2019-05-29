@@ -34,6 +34,7 @@ $query = $conn->query($sql);
 <td><?php echo $row['name']; ?></td>
 <td><?php echo $row['price']; ?></td>
 <td><?php echo $row['memory']; ?></td>
+<td> <button><a href="delete.php?id=<?=$row['id']?>">Delete</a></button></td>
 </tr>
 
 <?php } ?>
