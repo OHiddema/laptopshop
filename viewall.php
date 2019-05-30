@@ -26,14 +26,13 @@ $query = $conn->query($sql);
 </tr>
 
 
-<?php while ($row = $query->fetch()) { ?>
+<?php while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
 
 <tr>
-<td><?php echo $row['id'];?></td>
-<td><?php echo $row['brand'];?></td>
-<td><?php echo $row['name']; ?></td>
-<td><?php echo $row['price']; ?></td>
-<td><?php echo $row['memory']; ?></td>
+<?php foreach($row as $field) {
+   echo "<td>" . $field . "</td>";
+}
+?>
 <td> <button><a href="delete.php?id=<?=$row['id']?>">Delete</a></button></td>
 <td> <button><a href="editpage.php?id=<?=$row['id']?>">Edit</a></button></td>
 </tr>
