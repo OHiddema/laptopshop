@@ -17,9 +17,10 @@ Steps to undertake:
 start with administrator interface:
    [X] create a form to insert a record into the table
    [X] create a page to delete record from the table
-      [X] To be able to delete a record, we have first have to select a record.
-      [X] To select a record, we first have to fetch the records.
-      [X] Create a button for each record in HTML to delete the record.
-      [ ] Create a button for each record in HTML to update the record.
-   [ ] create a page to update a record from the table.
+   [X] To be able to delete a record, we have first have to select a record.
+   [X] To select a record, we first have to fetch the records.
+   [X] Create a button for each record in HTML to delete the record.
+   [X] Create a button for each record in HTML to update the record.
+   [X] create a form to edit a record from the table.
+
 
