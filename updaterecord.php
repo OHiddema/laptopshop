@@ -8,9 +8,14 @@
    $memory = $_POST['memory'];
 
    try {
-      $sql = "UPDATE laptops SET brand='" . $brand . "', name='" . $name . 
-      "',price='" . $price . "',memory='" . $memory. "' WHERE id='" .  $id . "'";
-      $conn->exec($sql);
+      // $sql = "UPDATE laptops SET brand='" . $brand . "', name='" . $name . 
+      // "',price='" . $price . "',memory='" . $memory. "' WHERE id='" .  $id . "'";
+      // $conn->exec($sql);
+
+      $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory WHERE id=:id");
+
+      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'id' => $id]); 
+
       echo "Record updated successfully<br>";
       }
    catch(PDOException $e)
