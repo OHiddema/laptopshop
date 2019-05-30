@@ -22,5 +22,8 @@ start with administrator interface:
    [X] Create a button for each record in HTML to delete the record.
    [X] Create a button for each record in HTML to update the record.
    [X] create a form to edit a record from the table.
+   [X] perform update query
+
+Administrator functionality now working (CRUD).
 
 
