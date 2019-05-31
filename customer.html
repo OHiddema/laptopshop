@@ -8,11 +8,11 @@
    <script>
       function getdata() {
          var http = new XMLHttpRequest();
-         var url = 'get_data.php';
+         var url = 'getcustfiltdata.php';
 
          params = "maxprice=<" + document.getElementById('maxprijs').value;
          params += "&minmem=>=" + document.getElementById('minmem').value;
-         http.open('POST', 'get_data.php', true);
+         http.open('POST',url , true);
 
          //Send the proper header information along with the request
          http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -30,8 +30,10 @@
    <h1>Filter laptops</h1>
    <hr>
 
-   Maximal price: <input onchange='getdata()' id='maxprijs' type="number" min = "0" max="1000" step="50" value='1000'><br>
-   Minimal memory: <input onchange='getdata()' id='minmem' type="number" min = "4" max = "32" step = "4" value='4'><br>
+   Maximal price: <input onchange='getdata()' id='maxprijs' type="number" min = "0" max="1000" step="50" value='1000'><br><br>
+   Minimal memory: <input onchange='getdata()' id='minmem' type="number" min = "4" max = "32" step = "4" value='4'><br><br>
+
+   <a href="index.php">Home</a>
 
    <!-- Select all data when page loads -->
    <script>getdata();</script>

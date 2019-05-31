@@ -31,7 +31,7 @@ Next is the customer interface. Goal of this interface is to select the laptops 
 - Minimum amount of memory
 When the customer changes a criterion, the selection of laptops that match all criteria must be shown on the same page where the criteria are set. Therefore, we are going to use an AJAX call. The SQL statement must be built dynamiccally, based on the set criteria.
    [X] Create customer page
-   [ ] Create php document to filter laptops and return the result of the query as a HTML table to the customer page.
+   [X] Create php document to filter laptops and return the result of the query as a HTML table to the customer page.
 
 
 
