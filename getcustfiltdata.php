@@ -7,6 +7,8 @@
    $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory');
    $query->execute(['price' => $maxprice, 'memory' => $minmem]);
 
+   echo 'There are ' . $query->rowCount() . ' laptops matching your criteria:<br><br>';
+   
    echo '<table border ="2">';
    echo '<tr>';
    echo '<th>id</th>';
