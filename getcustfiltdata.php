@@ -1,11 +1,11 @@
 <?php
    include_once('connect.php');
 
-   $x1 = $_POST['maxprice'];
-   $x2 = $_POST['minmem'];
+   $maxprice = $_POST['maxprice'];
+   $minmem = $_POST['minmem'];
 
-   $sql = "SELECT * FROM laptops WHERE price" . $x1 . " AND memory" . $x2;
-   $query = $conn->query($sql);
+   $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory');
+   $query->execute(['price' => $maxprice, 'memory' => $minmem]);
 
    echo '<table border ="2">';
    echo '<tr>';
