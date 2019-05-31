@@ -1,4 +1,5 @@
-<h1>Administrator cockpit</h1>
+<h1>Homepage</h1>
 <hr>
-<a href="addpage.php">Add record</a><br><br>
-<a href="viewall.php">View all</a>
+<a href="addpage.php">Administrator: Add record</a><br><br>
+<a href="viewall.php">Administrator: Update/Delete</a><br><br>
+<a href="customer.html">Customer: Filter</a><br><br>
