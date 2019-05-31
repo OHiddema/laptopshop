@@ -11,11 +11,14 @@
    
    echo '<table border ="2">';
    echo '<tr>';
-   echo '<th>id</th>';
-   echo '<th>brand</th>';
-   echo '<th>name</th>';
-   echo '<th>price</th>';
-   echo '<th>memory</th>';
+
+   // This is realy cool! Column names are fetched from the database.
+   $cols = $query->columnCount();
+   for ($i = 0; $i<$cols; $i++) {
+      $header = $query->getcolumnMeta($i)['name'];
+      echo '<th>' . $header . '</th>';
+   }
+   
    echo '</tr>';
 
    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
