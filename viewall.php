@@ -16,6 +16,8 @@ $sql = "SELECT * FROM laptops";
 $query = $conn->query($sql);
 ?>
 
+<button><a href="addpage.php">Add record</a></button><br><br>
+
 <table border ="2">
 <tr>
 <th>id</th>

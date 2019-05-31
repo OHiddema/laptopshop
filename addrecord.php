@@ -20,4 +20,4 @@
 ?>
 
 <br>
-<a href="index.php">Back</a>
+<a href="viewall.php">Back</a>

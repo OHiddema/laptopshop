@@ -37,6 +37,6 @@ $conn = null;
    <input type="submit" value = "update">
 </form>
 <br>
-<a href="index.php">Back to main page</a>
+<a href="viewall.php">Back</a>
 </body>
 </html>

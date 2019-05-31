@@ -17,6 +17,6 @@
    <input type="submit" value = "add">
 </form>
 <br>
-<a href="index.php">Back to main page</a>
+<a href="viewall.php">Back</a>
 </body>
 </html>
