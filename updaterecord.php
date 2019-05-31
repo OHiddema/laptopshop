@@ -9,13 +9,7 @@
 
    try {
       $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory WHERE id=:id");
-
-      $stmt->bindParam(':brand', $brand);
-      $stmt->bindParam(':name', $name);
-      $stmt->bindParam(':price', $price);
-      $stmt->bindParam(':memory', $memory);
-      $stmt->bindParam(':id', $id);
-      $stmt->execute();
+      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'id' => $id]);
 
       echo "Record updated successfully<br>";
       }

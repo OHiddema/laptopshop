@@ -1,9 +1,11 @@
 <?php
 require_once('connect.php');
 
+$id = $_GET['id'];
+
 try {
-   $sql = "SELECT * FROM laptops WHERE id=" . $_GET['id'];
-   $stmt = $conn->query($sql);
+   $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
+   $stmt->execute(['id' => $id]);
    $res = $stmt->fetch();
    }
 catch(PDOException $e)

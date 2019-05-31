@@ -1,18 +1,16 @@
 <?php
 require_once('connect.php');
 
-// var_dump($_GET);
-// echo $_GET['id'];
+$id = $_GET['id'];
 
 try {
-   $sql = "DELETE FROM laptops WHERE id=" . $_GET['id'];
-   // use exec() because no results are returned
-   $conn->exec($sql);
+   $stmt = $conn->prepare('DELETE FROM laptops WHERE id=:id');
+   $stmt->execute(['id' => $id]);
    echo "Record deleted successfully";
    }
 catch(PDOException $e)
    {
-   echo $sql . "<br>" . $e->getMessage();
+   echo 'DELETE FROM query' . "<br>" . $e->getMessage();
    }
 $conn = null;
 ?>
