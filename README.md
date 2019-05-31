@@ -26,4 +26,9 @@ start with administrator interface:
 
 Administrator functionality now working (CRUD).
 
+Next is the customer interface. Goal of this interface is to select the laptops based on the criteria the user sets. Like:
+- Maximum price
+- Minimum amount of memory
+When the customer changes a criterion, the selection of laptops that match all criteria must be shown on the same page where the criteria are set. Therefore, we are going to use an AJAX call. The SQL statement must be built dynamiccally, based on the set criteria.
+
 
