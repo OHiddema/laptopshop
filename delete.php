@@ -16,4 +16,4 @@ $conn = null;
 ?>
 
 <br>
-<a href="viewall.php">Back</a>
+<a href="?page=viewall">Back</a>

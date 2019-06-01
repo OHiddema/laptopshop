@@ -9,7 +9,7 @@
 <body>
 <h1>Add laptop</h1>
 <hr>
-<form action = "addrecord.php" method = "POST">
+<form action = "?page=addrecord" method = "POST">
    Brand: <input type="text" name="brand"><br><br>
    Name: <input type="text" name="name"><br><br>
    Price: <input type = "number" name = "price"><br><br>
@@ -17,6 +17,6 @@
    <input type="submit" value = "add">
 </form>
 <br>
-<a href="viewall.php">Back</a>
+<a href="?page=viewall">Back</a>
 </body>
 </html>

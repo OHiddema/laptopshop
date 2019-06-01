@@ -26,7 +26,7 @@ $conn = null;
 <body>
 <h1>Update laptop</h1>
 <hr>
-<form action = "updaterecord.php" method = "POST">
+<form action = "?page=updaterecord" method = "POST">
    <?php
    echo 'ID: <input type="text", name="id", value="' . $res['id'] . '" readonly> (read-only)<br><br>';
    echo 'Brand: <input type="text" name="brand" value="' . $res['brand'] . '"><br><br>';
@@ -37,6 +37,6 @@ $conn = null;
    <input type="submit" value = "update">
 </form>
 <br>
-<a href="viewall.php">Back</a>
+<a href="?page=viewall">Back</a>
 </body>
 </html>
