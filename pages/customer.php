@@ -2,7 +2,7 @@
    <script>
       function getdata() {
          var http = new XMLHttpRequest();
-         var url = 'getcustfiltdata.php';
+         var url = 'xhttp/getcustfiltdata.php';
 
          var maxprijs = document.getElementById('maxprijs').value;
          var minmem = document.getElementById('minmem').value;
