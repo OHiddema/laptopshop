@@ -17,6 +17,6 @@
         <base href="/laptopshop-1/">
     </head>
     <body>
-        <?php include($page);?>
+        <?php include('pages/'.$page);?>
     </body>
 </html>
