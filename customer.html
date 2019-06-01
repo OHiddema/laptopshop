@@ -10,8 +10,11 @@
          var http = new XMLHttpRequest();
          var url = 'getcustfiltdata.php';
 
-         params = "maxprice=" + document.getElementById('maxprijs').value;
-         params += "&minmem=" + document.getElementById('minmem').value;
+         var maxprijs = document.getElementById('maxprijs').value;
+         var minmem = document.getElementById('minmem').value;
+         obj = { "maxprijs":maxprijs, "minmem":minmem };
+         dbParam = JSON.stringify(obj);
+
          http.open('POST',url , true);
 
          //Send the proper header information along with the request
@@ -22,7 +25,9 @@
                document.getElementById("resultset").innerHTML = this.responseText;
             }
          }
-         http.send(params);   
+
+         http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");   
+         http.send("x=" + dbParam);
       }
    </script>
 </head>

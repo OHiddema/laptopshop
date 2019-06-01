@@ -1,11 +1,11 @@
 <?php
    include_once('connect.php');
 
-   $maxprice = $_POST['maxprice'];
-   $minmem = $_POST['minmem'];
+   header("Content-Type: application/json; charset=UTF-8");
+   $obj = json_decode($_POST["x"], false);
 
    $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory');
-   $query->execute(['price' => $maxprice, 'memory' => $minmem]);
+   $query->execute(['price' => $obj->maxprijs, 'memory' => $obj->minmem]);
 
    echo 'There are ' . $query->rowCount() . ' laptops matching your criteria:<br><br>';
    

@@ -33,5 +33,6 @@ When the customer changes a criterion, the selection of laptops that match all c
    [X] Create customer page
    [X] Create php document to filter laptops and return the result of the query as a HTML table to the customer page.
 
+Extra: using JSON to transfer the selection criteria from the user page to the server. In this case. there is no real benifit for doing it this way, but just for practising using JSON.
 
 
