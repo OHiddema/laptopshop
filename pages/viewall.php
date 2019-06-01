@@ -38,4 +38,4 @@ $query = $conn->query($sql);
 </table>
 
 <br>
-<a href="?page=index">Back to main page</a>
+<a href="?page=homepage">Back to main page</a>

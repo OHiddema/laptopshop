@@ -24,8 +24,7 @@
          http.send("x=" + dbParam);
       }
    </script>
-</head>
-<body>
+
    <h1>Filter laptops</h1>
    <hr>
 
@@ -38,5 +37,3 @@
    <script>getdata();</script>
 
    <p id='resultset'></p>
-</body>
-</html>
