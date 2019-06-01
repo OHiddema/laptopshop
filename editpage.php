@@ -15,15 +15,9 @@ catch(PDOException $e)
 $conn = null;
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Add record</title>
-</head>
-<body>
+
+<!-- <title>Add record</title> -->
+
 <h1>Update laptop</h1>
 <hr>
 <form action = "?page=updaterecord" method = "POST">
@@ -38,5 +32,3 @@ $conn = null;
 </form>
 <br>
 <a href="?page=viewall">Back</a>
-</body>
-</html>
