@@ -5,7 +5,7 @@
 <hr>
 
 <?php
-require_once('connect.php');
+
 $sql = "SELECT * FROM laptops";
 $query = $conn->query($sql);
 ?>

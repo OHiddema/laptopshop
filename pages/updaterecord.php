@@ -1,5 +1,4 @@
 <?php
-   require_once('connect.php');
 
    $id = $_POST['id'];
    $brand = $_POST['brand'];

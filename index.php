@@ -6,6 +6,8 @@ if(isset($_REQUEST['page'])) {
 
 } else $page = 'homepage.php';
 
+include('connect.php');
+
 ?>
 
 <!DOCTYPE html>
