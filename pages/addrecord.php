@@ -1,23 +1,4 @@
-<?php
-
-   $brand = $_POST['brand'];
-   $name = $_POST['name'];
-   $price =  $_POST['price'];
-   $memory = $_POST['memory'];
-
-   try {
-      $conn = Db::instance();
-      $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory) VALUES (:brand, :name, :price, :memory)');
-      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory]);
-      echo "New record created successfully<br>";
-      }
-   catch(PDOException $e)
-      {
-      echo 'INSERT INTO' . "<br>" . $e->getMessage();
-      }
-  
-   $conn = null;
-?>
+<?=addRecord($_POST['brand'], $_POST['name'], $_POST['price'], $_POST['memory']);?>
 
 <br>
 <a href="?page=viewall">Back</a>
