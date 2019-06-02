@@ -1,14 +1,15 @@
 <?php
 
+include('application/functions.php');
+include('application/Db.php');
+
+Db::connect('secret.php');
+
 if(isset($_REQUEST['page'])) {
 
     $page = $_REQUEST['page'].'.php';
 
 } else $page = 'homepage.php';
-
-include('application/Db.php');
-
-Db::connect('secret.php');
 
 ?>
 
