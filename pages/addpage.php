@@ -1,5 +1,3 @@
-<!-- <title>Add record</title> -->
-
 <h1>Add laptop</h1>
 <hr>
 <form action = "?page=addrecord" method = "POST">

@@ -4,9 +4,6 @@ if(!$res = getRecord($_GET['id'], $error)) echo $error;
 
 ?>
 
-
-<!-- <title>Add record</title> -->
-
 <h1>Update laptop</h1>
 <hr>
 <form action = "?page=updaterecord" method = "POST">
