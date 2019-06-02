@@ -10,17 +10,17 @@ $minmem = isset($_GET['minmem']) ? $_GET['minmem'] : 4;
    
    <input type="hidden" name="page" value="<?=$_GET['page'];?>" />
 
-   Maximal price: <input onchange='getdata()' name='maxprijs' type="number" min = "0" max="1000" step="100" value='<?=$maxprijs;?>'><br><br>
-   Minimal memory: <input onchange='getdata()' name='minmem' type="number" min = "4" max = "32" step = "4" value='<?=$minmem;?>'><br><br>
+   Maximal price: <input onchange='getdata()' id="maxprijs" name='maxprijs' type="number" min = "0" max="1000" step="100" value='<?=$maxprijs;?>'><br><br>
+   Minimal memory: <input onchange='getdata()' id="minmem" name='minmem' type="number" min = "4" max = "32" step = "4" value='<?=$minmem;?>'><br><br>
 
-   <input type="submit" value="Filter" /><br /><br />
+   <input type="submit" class="submit" id="filterResults" value="Filter" />
 
 </form>
 
 <a href="?page=homepage">Home</a>
 
-<?php $results = filterRecords($maxprijs, $minmem, $count);?>
+<div id='resultset'>
 
-<p>There are <?=$count;?> laptops matching your criteria:<br><br>
+   <?=filterRecords($maxprijs, $minmem);?>
 
-<p id='resultset'><?=$results;?></p>
+</div>

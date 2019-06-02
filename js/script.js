@@ -1,3 +1,15 @@
+window.onload = function() {
+
+   hideFilterSubmit();
+
+}
+
+function hideFilterSubmit() {
+
+   document.getElementById('filterResults').style.display = 'none';
+
+}
+
 function getdata() {
     var http = new XMLHttpRequest();
     var url = 'xhttp/getcustfiltdata.php';
@@ -8,9 +20,6 @@ function getdata() {
     dbParam = JSON.stringify(obj);
 
     http.open('POST',url , true);
-
-    //Send the proper header information along with the request
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
     http.onreadystatechange = function() {//Call a function when the state changes.
        if(http.readyState == 4 && http.status == 200) {

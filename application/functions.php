@@ -66,7 +66,7 @@ function updateRecord($id, $brand, $name, $price, $memory) {
 
 }
 
-function filterRecords($maxprijs, $minmem, &$count) {
+function filterRecords($maxprijs, $minmem) {
 
     $conn = Db::instance();
     $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory');
@@ -99,6 +99,6 @@ function filterRecords($maxprijs, $minmem, &$count) {
     
 $table .= '</table>';    
 
-return $table;
+return 'There are '.$count.' laptops matching your criteria:<br><br>'.$table;
 
 }

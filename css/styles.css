@@ -6,3 +6,9 @@ a.button
     border: outset #999 1px;
     text-decoration: none;
 }
+
+form .submit
+{
+    display: inline-block;
+    margin-bottom: 1em;
+}
