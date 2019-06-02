@@ -37,7 +37,7 @@ function deleteRecord($id) {
     if($stmt->execute(['id' => $id])) {
         return "Record deleted successfully";
     } else {
-        return 'DELETE FROM query' . "<br>" . $e->getMessage();
+        return 'DELETE FROM query' . "<br>" . $stmt->errorInfo()[2];
     }
 
 }
@@ -49,7 +49,7 @@ function getRecord($id, &$error) {
     if($stmt->execute(['id' => $id])) {
         return $stmt->fetch();
     } else {
-        $error = $sql . "<br>" . $e->getMessage();
+        $error = $sql . "<br>" . $stmt->errorInfo()[2];
     }
 
 }

@@ -21,8 +21,8 @@
    <?php foreach($record as $field):?> 
    <td><?=$field;?></td>
    <?php endforeach;?>
-   <td> <button><a href="?page=delete&amp;id=<?=$record['id']?>">Delete</a></button></td>
-   <td> <button><a href="?page=editpage&amp;id=<?=$record['id']?>">Edit</a></button></td>
+   <td> <a href="?page=delete&amp;id=<?=$record['id']?>">Delete</a></td>
+   <td> <a href="?page=editpage&amp;id=<?=$record['id']?>">Edit</a></td>
 </tr>
         
 <?php endforeach;?>
