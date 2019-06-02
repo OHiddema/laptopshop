@@ -9,9 +9,7 @@ function allRecords() {
     $query = $conn->query($sql);
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) { 
-        
         $records[] = $row;
-        
     }
 
     return $records;
@@ -20,29 +18,25 @@ function allRecords() {
 
 function addRecord($brand, $name, $price, $memory) {
   
-    try {
-       $conn = Db::instance();
-       $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory) VALUES (:brand, :name, :price, :memory)');
-       $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory]);
-       return "New record created successfully<br>";
-    }
-    catch(PDOException $e)
-       {
-       return 'INSERT INTO' . "<br>" . $e->getMessage();
-       }
+    $conn = Db::instance();
+    $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory) VALUES (:brand, :name, :price, :memory)');
 
+    if($stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory])) {
+        return "New record created successfully<br>";
+    } else {
+        return 'INSERT INTO' . "<br>" . $stmt->errorInfo()[2];
+    }
+    
 }
 
 function deleteRecord($id) {
-
-    try {
-        $conn = Db::instance();
-        $stmt = $conn->prepare('DELETE FROM laptops WHERE id=:id');
-        $stmt->execute(['id' => $id]);
+    
+    $conn = Db::instance();
+    $stmt = $conn->prepare('DELETE FROM laptops WHERE id=:id');
+   
+    if($stmt->execute(['id' => $id])) {
         return "Record deleted successfully";
-    }
-    catch(PDOException $e)
-    {
+    } else {
         return 'DELETE FROM query' . "<br>" . $e->getMessage();
     }
 
@@ -50,30 +44,24 @@ function deleteRecord($id) {
 
 function getRecord($id, &$error) {
    
-    try {
-        $conn = Db::instance();
-        $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
-        $stmt->execute(['id' => $id]);
+    $conn = Db::instance();
+    $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
+    if($stmt->execute(['id' => $id])) {
         return $stmt->fetch();
-    }
-    catch(PDOException $e)
-    {
+    } else {
         $error = $sql . "<br>" . $e->getMessage();
     }
 
 }
 
-function updateRecord($id) {
+function updateRecord($id, $brand, $name, $price, $memory) {
     
-    try {
-        $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory WHERE id=:id");
-        $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'id' => $id]);
-  
+    $conn = Db::instance();
+    $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory WHERE id=:id");
+    if($stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'id' => $id])) {
         return "Record updated successfully<br>";
-        }
-     catch(PDOException $e)
-        {
-        return $sql . "<br>" . $e->getMessage();
-        }
+    } else {
+        return $sql . "<br>" . $stmt->errorInfo()[2];
+    }
 
 }
