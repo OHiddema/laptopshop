@@ -1,18 +1,7 @@
 <?php
 
-$id = $_GET['id'];
+if(!$res = getRecord($_GET['id'], $error)) echo $error;
 
-try {
-   $conn = Db::instance();
-   $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
-   $stmt->execute(['id' => $id]);
-   $res = $stmt->fetch();
-   }
-catch(PDOException $e)
-   {
-   echo $sql . "<br>" . $e->getMessage();
-   }
-$conn = null;
 ?>
 
 
