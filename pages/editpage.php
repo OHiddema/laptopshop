@@ -1,32 +1,12 @@
 <?php
-require_once('connect.php');
 
-$id = $_GET['id'];
+if(!$res = getRecord($_GET['id'], $error)) echo $error;
 
-try {
-   $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
-   $stmt->execute(['id' => $id]);
-   $res = $stmt->fetch();
-   }
-catch(PDOException $e)
-   {
-   echo $sql . "<br>" . $e->getMessage();
-   }
-$conn = null;
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Add record</title>
-</head>
-<body>
 <h1>Update laptop</h1>
 <hr>
-<form action = "updaterecord.php" method = "POST">
+<form action = "?page=updaterecord" method = "POST">
    <?php
    echo 'ID: <input type="text", name="id", value="' . $res['id'] . '" readonly> (read-only)<br><br>';
    echo 'Brand: <input type="text" name="brand" value="' . $res['brand'] . '"><br><br>';
@@ -37,6 +17,4 @@ $conn = null;
    <input type="submit" value = "update">
 </form>
 <br>
-<a href="viewall.php">Back</a>
-</body>
-</html>
+<a href="?page=viewall">Back</a>
