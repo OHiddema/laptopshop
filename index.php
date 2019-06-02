@@ -19,6 +19,7 @@ if(isset($_REQUEST['page'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="/laptopshop-1/">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>

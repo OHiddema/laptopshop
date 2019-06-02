@@ -4,7 +4,7 @@
 <h1>All laptops</h1>
 <hr>
 
-<button><a href="?page=addpage">Add record</a></button><br><br>
+<a class="button" href="?page=addpage">Add record</a><br><br>
 
 <table border ="2">
 <tr>
@@ -21,8 +21,8 @@
    <?php foreach($record as $field):?> 
    <td><?=$field;?></td>
    <?php endforeach;?>
-   <td> <a href="?page=delete&amp;id=<?=$record['id']?>">Delete</a></td>
-   <td> <a href="?page=editpage&amp;id=<?=$record['id']?>">Edit</a></td>
+   <td> <a class="button" href="?page=delete&amp;id=<?=$record['id']?>">Delete</a></td>
+   <td> <a class="button" href="?page=editpage&amp;id=<?=$record['id']?>">Edit</a></td>
 </tr>
         
 <?php endforeach;?>
