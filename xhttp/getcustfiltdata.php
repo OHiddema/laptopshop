@@ -1,9 +1,12 @@
 <?php
-   include_once('../connect.php');
+   include('../application/Db.php');
+
+   Db::connect('../secret.php');
 
    header("Content-Type: application/json; charset=UTF-8");
    $obj = json_decode($_POST["x"], false);
 
+   $conn = Db::instance();
    $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory');
    $query->execute(['price' => $obj->maxprijs, 'memory' => $obj->minmem]);
 

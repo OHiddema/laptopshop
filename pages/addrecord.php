@@ -6,6 +6,7 @@
    $memory = $_POST['memory'];
 
    try {
+      $conn = Db::instance();
       $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory) VALUES (:brand, :name, :price, :memory)');
       $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory]);
       echo "New record created successfully<br>";

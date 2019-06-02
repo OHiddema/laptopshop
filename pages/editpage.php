@@ -3,6 +3,7 @@
 $id = $_GET['id'];
 
 try {
+   $conn = Db::instance();
    $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
    $stmt->execute(['id' => $id]);
    $res = $stmt->fetch();

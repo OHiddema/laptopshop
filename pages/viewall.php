@@ -5,7 +5,7 @@
 <hr>
 
 <?php
-
+$conn = Db::instance();
 $sql = "SELECT * FROM laptops";
 $query = $conn->query($sql);
 ?>
