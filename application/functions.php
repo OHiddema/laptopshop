@@ -65,3 +65,40 @@ function updateRecord($id, $brand, $name, $price, $memory) {
     }
 
 }
+
+function filterRecords($maxprijs, $minmem, &$count) {
+
+    $conn = Db::instance();
+    $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory');
+    $query->execute(['price' => $maxprijs, 'memory' => $minmem]);
+ 
+    $count = $query->rowCount();
+    
+    $table = '<table border ="2">';
+    $table .= '<tr>';
+ 
+    // This is realy cool! Column names are fetched from the database.
+    $cols = $query->columnCount();
+    for ($i = 0; $i<$cols; $i++) {
+       $header = $query->getcolumnMeta($i)['name'];
+       $table .= '<th>' . $header . '</th>';
+    }
+    
+    $table .= '</tr>';
+ 
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+ 
+        $table .= '<tr>';
+        foreach($row as $field) {
+            $table .= "<td>" . $field . "</td>";
+        }
+       
+        $table .= '</tr>';
+       
+}
+    
+$table .= '</table>';    
+
+return $table;
+
+}
