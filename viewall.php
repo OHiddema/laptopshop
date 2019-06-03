@@ -1,12 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Select all laptops</title>
-</head>
-<body> -->
 <h1>All laptops</h1>
 <hr>
 
@@ -35,8 +26,6 @@ $query = $conn->query($sql);
    echo "<td>" . $field . "</td>";
 }
 ?>
-<!-- <td> <button><a href="?page=delete.php?id=<?=$row['id']?>">Delete</a></button></td>
-<td> <button><a href="?page=editpage.php?id=<?=$row['id']?>">Edit</a></button></td> -->
 <td> <button><a href="?page=delete.php&id=<?=$row['id']?>">Delete</a></button></td>
 <td> <button><a href="?page=editpage.php&id=<?=$row['id']?>">Edit</a></button></td>
 </tr>
@@ -46,8 +35,4 @@ $query = $conn->query($sql);
 </table>
 
 <br>
-<!-- <a href="?page=index.php">Back to main page</a> -->
 <a href="?page=homepage.php">Back to main page</a>
-
-<!-- </body>
-</html> -->
