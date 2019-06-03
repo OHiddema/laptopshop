@@ -22,4 +22,4 @@
 ?>
 
 <br>
-<a href="viewall.php">Back</a>
+<a href="?page=viewall.php">Back</a>

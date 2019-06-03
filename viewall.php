@@ -16,7 +16,7 @@ $sql = "SELECT * FROM laptops";
 $query = $conn->query($sql);
 ?>
 
-<button><a href="addpage.php">Add record</a></button><br><br>
+<button><a href="?page=addpage.php">Add record</a></button><br><br>
 
 <table border ="2">
 <tr>
@@ -35,8 +35,8 @@ $query = $conn->query($sql);
    echo "<td>" . $field . "</td>";
 }
 ?>
-<td> <button><a href="delete.php?id=<?=$row['id']?>">Delete</a></button></td>
-<td> <button><a href="editpage.php?id=<?=$row['id']?>">Edit</a></button></td>
+<td> <button><a href="?page=delete.php?id=<?=$row['id']?>">Delete</a></button></td>
+<td> <button><a href="?page=editpage.php?id=<?=$row['id']?>">Edit</a></button></td>
 </tr>
 
 <?php } ?>
@@ -44,7 +44,7 @@ $query = $conn->query($sql);
 </table>
 
 <br>
-<a href="index.php">Back to main page</a>
+<a href="?page=index.php">Back to main page</a>
 
 </body>
 </html>
