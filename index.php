@@ -1,6 +1,7 @@
 <?php
     if(isset($_REQUEST['page'])) {
-        $page = $_REQUEST['page'].'.php';
+      //   $page = $_REQUEST['page'].'.php';
+        $page = $_REQUEST['page'];
     } else $page = 'homepage.php';
 ?>
 

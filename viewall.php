@@ -35,8 +35,10 @@ $query = $conn->query($sql);
    echo "<td>" . $field . "</td>";
 }
 ?>
-<td> <button><a href="?page=delete.php?id=<?=$row['id']?>">Delete</a></button></td>
-<td> <button><a href="?page=editpage.php?id=<?=$row['id']?>">Edit</a></button></td>
+<!-- <td> <button><a href="?page=delete.php?id=<?=$row['id']?>">Delete</a></button></td>
+<td> <button><a href="?page=editpage.php?id=<?=$row['id']?>">Edit</a></button></td> -->
+<td> <button><a href="?page=delete.php&id=<?=$row['id']?>">Delete</a></button></td>
+<td> <button><a href="?page=editpage.php&id=<?=$row['id']?>">Edit</a></button></td>
 </tr>
 
 <?php } ?>
@@ -44,7 +46,8 @@ $query = $conn->query($sql);
 </table>
 
 <br>
-<a href="?page=index.php">Back to main page</a>
+<!-- <a href="?page=index.php">Back to main page</a> -->
+<a href="?page=homepage.php">Back to main page</a>
 
 <!-- </body>
 </html> -->
