@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Select all laptops</title>
 </head>
-<body>
+<body> -->
 <h1>All laptops</h1>
 <hr>
 
@@ -46,5 +46,5 @@ $query = $conn->query($sql);
 <br>
 <a href="?page=index.php">Back to main page</a>
 
-</body>
-</html>
+<!-- </body>
+</html> -->
