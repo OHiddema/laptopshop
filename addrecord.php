@@ -9,10 +9,11 @@
    // Set blnzactive to zero (false) is checkbox is unchecked
    $blnactive = (isset($_POST['blnactive'])) ? $_POST['blnactive'] : 0;
 
+   $category = $_POST['category'];
 
    try {
-      $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory, blnactive) VALUES (:brand, :name, :price, :memory, :blnactive)');
-      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'blnactive' => $blnactive]);
+      $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory, blnactive, category) VALUES (:brand, :name, :price, :memory, :blnactive, :category)');
+      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'blnactive' => $blnactive, 'category' => $category]);
       echo "New record created successfully<br>";
       }
    catch(PDOException $e)
