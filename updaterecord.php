@@ -6,7 +6,9 @@
    $name = $_POST['name'];
    $price =  $_POST['price'];
    $memory = $_POST['memory'];
-   $blnactive = $_POST['blnactive'];
+
+   // Set blnzactive to zero (false) is checkbox is unchecked
+   $blnactive = (isset($_POST['blnactive'])) ? $_POST['blnactive'] : 0;
 
    try {
       $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory, blnactive=:blnactive WHERE id=:id");

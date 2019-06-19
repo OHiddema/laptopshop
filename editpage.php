@@ -25,7 +25,7 @@ $conn = null;
    echo 'Price: <input type = "number" name = "price" value="' . $res['price'] . '"><br><br>';
    echo 'Memory (GB): <input type="number" name="memory" min = "4" max = "32" step = "4" value="' . $res['memory'] . '"><br><br>';
    $checked = ($res['blnactive']==1) ? 'checked' : '';
-   echo 'Active: <input type = "checkbox" name = "blnactive" value="blnactive" ' . $checked . '><br><br>';
+   echo 'Active: <input type = "checkbox" name = "blnactive" value="1" ' . $checked . '><br><br>';
    ?>
    <input type="submit" value = "update">
 </form>
