@@ -17,6 +17,7 @@
    echo '<th>name</th>';
    echo '<th>price</th>';
    echo '<th>memory</th>';   
+   echo '<th>category</th>';   
 
    echo '</tr>';
 
