@@ -16,6 +16,7 @@ $query = $conn->query($sql);
 <th>name</th>
 <th>price</th>
 <th>memory</th>
+<th>active</th>
 </tr>
 
 

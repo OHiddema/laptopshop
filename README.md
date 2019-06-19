@@ -1,13 +1,20 @@
 Laptopshop – user story's
 
+Done:
 1. Als beheerder wil ik producten kunnen aanmaken, zodat klanten het actuele productaanbod kunnen zien.
 2. Als beheerder wil ik de eigenschappen van een product kunnen veranderen, zodat klanten de actuele eigenschappen van alle producten kunnen zien.
-3. Als beheerder wil ik producten die niet meer verkocht worden op inactief kunnen zetten, zodat deze producten voor de gebruiker niet meer zichtbaar zijn.
 4. Als beheerder wil ik producten kunnen verwijderen.
+
+15. Als klant wil ik vanuit de introductiepagina naar een overzichtspagina kunnen gaan, waarop alle producten worden getoond, zodat ik snel een totaalbeeld kan krijgen.
+16. Als klant wil ik op de overzichtspagina kunnen filteren op specifieke producteigenschappen, (merk, hoeveelheid geheugen) zodat ik producten kan zien die aan mijn wensen voldoen.
+
+
+To do:
+3. Als beheerder wil ik producten die niet meer verkocht worden op inactief kunnen zetten, zodat deze producten voor de gebruiker niet meer zichtbaar zijn.
 5. Als beheerder wil ik de producten kunnen onderverdelen in categorieën, zodat producten makkelijker kunnen worden gevonden.
-6. Als klant wil ik een productcategorie kunnen selecteren, zodat ik eenvoudiger produkten kan vinden.
+6. Als klant wil ik een productcategorie kunnen selecteren, zodat ik eenvoudiger producten kan vinden.
 7. Als beheerder wil ik de totale omzet van de webshop over een bepaalde periode kunnen raadplegen, zodat ik kan beoordelen of de shop goed draait.
-8. Als beheerder wil ik actie-campagnes kunnen aanmaken waarin producten voor een bepaalde periode met korting worden aanbieden.
+8. Als beheerder wil ik actie-campagnes kunnen aanmaken waarin producten voor een bepaalde periode met korting worden aangeboden.
 9. Als beheerder wil ik op de introductiepagina de klant attent maken op deze actie-campagnes.
 10. Als beheerder wil ik kortingsniveaus kunnen instellen als de waarde van de bestelling hoger is dan een bepaald bedrag, zodat de klant wellicht een grotere bestelling gaat doen.
 11. Als beheerder wil ik kunnen instellen dat klanten die binnen een bepaalde periode meer dan een betaald bedrag hebben besteed, een extra korting krijgen op de eerstvolgende bestelling, zodat de klant wellicht meer gaat bestellen.
@@ -15,8 +22,6 @@ Laptopshop – user story's
 13. Als beheerder wil ik een overzicht kunnen krijgen van slechte klantreviews, zodat ik deze klanten desnoods tegemoet kan komen.
 
 14. Als klant wil ik bij het starten van de applicatie een introductiepagina van de shop zien, zodat ik weet wat deze shop inhoudt.
-15. Als klant wil ik vanuit de introductiepagina naar een overzichtspagina kunnen gaan, waarop alle producten worden getoond, zodat ik snel een totaalbeeld kan krijgen.
-16. Als klant wil ik op de overzichtspagina kunnen filteren specifieke producteigenschappen, (merk, hoeveelheid geheugen) zodat ik producten kan zien die aan mijn wensen voldoen.
 17. Als klant wil ik op de overzichtspagina middels een zoekveld producten kunnen filteren, zodat ik producten kan vinden die aan mijn wensen voldoen. Dit zoekveld filtert over alle eigenschappen van de producten.
 18. Als klant wil ik van een product gedetailleerde informatie kunnen zien, als ik op de overzichtspagina een product selecteer, zodat ik kan beoordelen of dit product voor mij interessant is.
 19. Als klant wil ik een product, zoals getoond op de detailpagina, kunnen selecteren, zodat ik deze aan mijn winkelmandje toe kan voegen.
