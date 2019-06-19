@@ -10,9 +10,11 @@
    // Set blnzactive to zero (false) is checkbox is unchecked
    $blnactive = (isset($_POST['blnactive'])) ? $_POST['blnactive'] : 0;
 
+   $category = $_POST['category'];
+
    try {
-      $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory, blnactive=:blnactive WHERE id=:id");
-      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'blnactive' => $blnactive, 'id' => $id]);
+      $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory, blnactive=:blnactive, category=:category WHERE id=:id");
+      $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'blnactive' => $blnactive, 'category' => $category, 'id' => $id]);
 
       echo "Record updated successfully<br>";
       }
