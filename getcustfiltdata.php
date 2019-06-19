@@ -4,8 +4,13 @@
    header("Content-Type: application/json; charset=UTF-8");
    $obj = json_decode($_POST["x"], false);
 
-   $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory AND blnactive="1"');
-   $query->execute(['price' => $obj->maxprijs, 'memory' => $obj->minmem]);
+   if($obj->category=='All') {
+      $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory AND blnactive="1"');
+      $query->execute(['price' => $obj->maxprijs, 'memory' => $obj->minmem]);
+   } else {
+      $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory AND blnactive="1" AND category=:category');
+      $query->execute(['price' => $obj->maxprijs, 'memory' => $obj->minmem, 'category' => $obj->category]);
+   }
 
    echo 'There are ' . $query->rowCount() . ' laptops matching your criteria:<br><br>';
    
