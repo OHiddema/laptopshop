@@ -34,7 +34,7 @@ $conn = null;
    "<option value='B' $b>Budget</option>".
    "<option value='A' $a>Allround</option>".
    "<option value='P' $p>Professional</option>".
-   '</select>'
+   '</select><br><br>'
 
    ?>
    <input type="submit" value = "update">
