@@ -8,9 +8,10 @@ Done:
 15. Als klant wil ik vanuit de introductiepagina naar een overzichtspagina kunnen gaan, waarop alle producten worden getoond, zodat ik snel een totaalbeeld kan krijgen.
 16. Als klant wil ik op de overzichtspagina kunnen filteren op specifieke producteigenschappen, (merk, hoeveelheid geheugen) zodat ik producten kan zien die aan mijn wensen voldoen.
 
+Working on:
+3. Als beheerder wil ik producten die niet meer verkocht worden op inactief kunnen zetten, zodat deze producten voor de gebruiker niet meer zichtbaar zijn.
 
 To do:
-3. Als beheerder wil ik producten die niet meer verkocht worden op inactief kunnen zetten, zodat deze producten voor de gebruiker niet meer zichtbaar zijn.
 5. Als beheerder wil ik de producten kunnen onderverdelen in categorieën, zodat producten makkelijker kunnen worden gevonden.
 6. Als klant wil ik een productcategorie kunnen selecteren, zodat ik eenvoudiger producten kan vinden.
 7. Als beheerder wil ik de totale omzet van de webshop over een bepaalde periode kunnen raadplegen, zodat ik kan beoordelen of de shop goed draait.
