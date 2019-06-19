@@ -5,6 +5,8 @@
    Name: <input type="text" name="name"><br><br>
    Price: <input type = "number" name = "price"><br><br>
    Memory (GB): <input type="number" name="memory" min = "4" max = "32" step = "4"><br><br>
+   <!-- Active is true by default -->
+   Active: <input type = "checkbox" name = "blnactive" value="1" checked><br><br>
    <input type="submit" value = "add">
 </form>
 <br>
