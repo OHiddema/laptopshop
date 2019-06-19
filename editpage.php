@@ -26,6 +26,16 @@ $conn = null;
    echo 'Memory (GB): <input type="number" name="memory" min = "4" max = "32" step = "4" value="' . $res['memory'] . '"><br><br>';
    $checked = ($res['blnactive']==1) ? 'checked' : '';
    echo 'Active: <input type = "checkbox" name = "blnactive" value="1" ' . $checked . '><br><br>';
+
+   $b = ($res['category']=='B') ? 'selected' : '';
+   $a = ($res['category']=='A') ? 'selected' : '';
+   $p = ($res['category']=='P') ? 'selected' : '';
+   echo 'Category: <select name="category">'.
+   "<option value='B' $b>Budget</option>".
+   "<option value='A' $a>Allround</option>".
+   "<option value='P' $p>Professional</option>".
+   '</select>'
+
    ?>
    <input type="submit" value = "update">
 </form>
