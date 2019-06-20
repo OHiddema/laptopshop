@@ -10,9 +10,10 @@ Done:
 3. Als beheerder wil ik producten die niet meer verkocht worden op inactief kunnen zetten, zodat deze producten voor de gebruiker niet meer zichtbaar zijn.
 5. Als beheerder wil ik de producten kunnen onderverdelen in categorieën, zodat producten makkelijker kunnen worden gevonden.
 6. Als klant wil ik een productcategorie kunnen selecteren, zodat ik eenvoudiger producten kan vinden.
+26. Als klant wil ik kunnen inloggen, zodat ik mijn algemene gegevens slechts eenmaal in hoef te vullen.
 
 Working on:
-26. Als klant wil ik kunnen inloggen, zodat ik mijn algemene gegevens slechts eenmaal in hoef te vullen.
+19. Als klant wil ik een product, zoals getoond op de overzichtspagina, kunnen selecteren, zodat ik deze aan mijn winkelmandje toe kan voegen.
 
 To do:
 7. Als beheerder wil ik de totale omzet van de webshop over een bepaalde periode kunnen raadplegen, zodat ik kan beoordelen of de shop goed draait.
@@ -22,8 +23,6 @@ To do:
 11. Als beheerder wil ik kunnen instellen dat klanten die binnen een bepaalde periode meer dan een betaald bedrag hebben besteed, een extra korting krijgen op de eerstvolgende bestelling, zodat de klant wellicht meer gaat bestellen.
 12. Als beheerder wil ik de klant productsuggesties geven op basis van zijn/haar profiel.
 13. Als beheerder wil ik een overzicht kunnen krijgen van slechte klantreviews, zodat ik deze klanten desnoods tegemoet kan komen.
-18. Als klant wil ik van een product gedetailleerde informatie kunnen zien, als ik op de overzichtspagina een product selecteer, zodat ik kan beoordelen of dit product voor mij interessant is.
-19. Als klant wil ik een product, zoals getoond op de detailpagina, kunnen selecteren, zodat ik deze aan mijn winkelmandje toe kan voegen.
 20. Als klant wil ik de inhoud van mijn winkelmandje kunnen raadplegen.
 21. Als klant wil ik items uit mijn winkelmandje kunnen verwijderen.
 22. Als klant wil ik de hoeveelheid van elk item in mijn winkelmandje kunnen wijzigen.
@@ -39,12 +38,3 @@ To do:
 Irrelevant user stories (?)
 14. Als klant wil ik bij het starten van de applicatie een introductiepagina van de shop zien, zodat ik weet wat deze shop inhoudt.
 17. Als klant wil ik op de overzichtspagina middels een zoekveld producten kunnen filteren, zodat ik producten kan vinden die aan mijn wensen voldoen. Dit zoekveld filtert over alle eigenschappen van de producten.
-
----------------------------------------------------------------
-26. Als klant wil ik kunnen inloggen, zodat ik mijn algemene gegevens slechts eenmaal in hoef te vullen.
-
-To do voor dit punt:
-- tabel 'customers' ontwerpen.
-Velden: customer_id, username, email, password
-- Pagina voor registreren customer ontwerpen.
-- Pagina voor inloggen customer ontwerpen.
