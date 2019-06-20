@@ -5,12 +5,16 @@
    $password = $_POST['password'];
 
    try {
-      $stmt = $conn->prepare('SELECT COUNT(*) FROM customers WHERE username=:username AND password=:password');
+      $stmt = $conn->prepare('SELECT * FROM customers WHERE username=:username AND password=:password');
       $stmt->execute(['username' => $username, 'password' => $password]);
-      if ($stmt->fetchColumn()>0) {
-         echo "Successfully logged in";
-      } else {
+      $row = $stmt->fetch(PDO::FETCH_ASSOC);
+      if (!$row) {
          echo "User not found";
+      } else {
+         session_start();
+         $_SESSION['logged_in_user_id'] = $row['id'];
+         $_SESSION['logged_in_user_name'] = $row['username'];
+         echo "Successfully logged in";
       }
    }
    catch(PDOException $e)
