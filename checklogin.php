@@ -1,4 +1,5 @@
 <?php
+   session_start();
    require_once('connect.php');
 
    $username = $_POST['username'];
@@ -9,13 +10,19 @@
       $stmt->execute(['username' => $username, 'password' => $password]);
       $row = $stmt->fetch(PDO::FETCH_ASSOC);
       if (!$row) {
-         echo "User not found";
+         session_destroy();
       } else {
-         session_start();
          $_SESSION['logged_in_user_id'] = $row['id'];
          $_SESSION['logged_in_user_name'] = $row['username'];
-         echo "Successfully logged in";
       }
+      
+      /* Redirect to a different page in the current directory that was requested */
+      $host  = $_SERVER['HTTP_HOST'];
+      $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+      $extra = 'login.php';
+      header("Location: http://$host$uri/$extra");
+      exit;
+
    }
    catch(PDOException $e)
       {
