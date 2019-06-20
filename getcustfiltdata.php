@@ -36,7 +36,7 @@
       }      
 
       ?>
-      <td> <button><a href="?page=buy.php&id=<?=$row['id']?>">Buy</a></button></td>
+      <td> <button><a href="?page=showdetails.php&id=<?=$row['id']?>">Show details</a></button></td>
       <?php
 
       echo '</tr>';
