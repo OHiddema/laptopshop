@@ -34,6 +34,13 @@
             echo "<td>" . $field . "</td>";
          }
       }      
+
+      // Add a button holding the laptop id
+      ?>
+      <td> <button><a href="?page=buy.php&id=<?=$row['id']?>">Buy</a></button></td>
+      <?php
+      // Add a button holding the laptop id
+
       echo '</tr>';
       
 }
