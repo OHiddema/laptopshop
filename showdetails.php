@@ -29,7 +29,7 @@
 <form action = "?page=addtobasket.php" method = "POST">
    <?php
       echo '<input type="hidden", name="id", value="' . $res['id'] . '">';
-      echo 'Quantity: <input type="number" name="number" min="1", step="1", value="1"><br><br>';
+      echo 'Quantity: <input type="number" name="amount" min="1", step="1", value="1"><br><br>';
    ?>
    <input type="submit" value = "Add to basket">
 </form>
