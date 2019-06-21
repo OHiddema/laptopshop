@@ -8,7 +8,17 @@
    try {
       $stmt = $conn->prepare('INSERT INTO customers (username, email, password) VALUES (:username, :email, :password)');
       $stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]);
-      echo "New record created successfully<br>";
+
+      //New user is alaways accepted.
+      //To do: check if usename or email already exists in customer table
+      //If so: redirect to register page
+
+      // redirect to login page
+      $host  = $_SERVER['HTTP_HOST'];
+      $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+      $page = '?page=login.php';
+      header("Location: http://$host$uri/$page");
+      exit;
       }
    catch(PDOException $e)
       {
