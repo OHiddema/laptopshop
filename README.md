@@ -10,9 +10,10 @@ Done:
 5. Als beheerder wil ik de producten kunnen onderverdelen in categorieën, zodat producten makkelijker kunnen worden gevonden.
 6. Als klant wil ik een productcategorie kunnen selecteren, zodat ik eenvoudiger producten kan vinden.
 26. Als klant wil ik kunnen inloggen, zodat ik mijn algemene gegevens slechts eenmaal in hoef te vullen.
+19. Als klant wil ik een product, zoals getoond op de overzichtspagina, kunnen selecteren, zodat ik deze aan mijn winkelmandje toe kan voegen.
 
 Working on:
-19. Als klant wil ik een product, zoals getoond op de overzichtspagina, kunnen selecteren, zodat ik deze aan mijn winkelmandje toe kan voegen.
+20. Als klant wil ik de inhoud van mijn winkelmandje kunnen raadplegen.
 
 To do:
 7. Als beheerder wil ik de totale omzet van de webshop over een bepaalde periode kunnen raadplegen, zodat ik kan beoordelen of de shop goed draait.
@@ -22,7 +23,6 @@ To do:
 11. Als beheerder wil ik kunnen instellen dat klanten die binnen een bepaalde periode meer dan een betaald bedrag hebben besteed, een extra korting krijgen op de eerstvolgende bestelling, zodat de klant wellicht meer gaat bestellen.
 12. Als beheerder wil ik de klant productsuggesties geven op basis van zijn/haar profiel.
 13. Als beheerder wil ik een overzicht kunnen krijgen van slechte klantreviews, zodat ik deze klanten desnoods tegemoet kan komen.
-20. Als klant wil ik de inhoud van mijn winkelmandje kunnen raadplegen.
 21. Als klant wil ik items uit mijn winkelmandje kunnen verwijderen.
 22. Als klant wil ik de hoeveelheid van elk item in mijn winkelmandje kunnen wijzigen.
 23. Als klant wil ik op de introductiepagina kunnen zien hoeveel items er in mijn winkelmandje zitten.
