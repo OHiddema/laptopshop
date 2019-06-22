@@ -15,6 +15,12 @@
    $querysum->execute(['user_id' => $user_id]);
    $sum = $querysum->fetch(PDO::FETCH_ASSOC);
 
+   $querytot = $conn->prepare('SELECT SUM(basket.amount * laptops.price) as totgen 
+   FROM basket LEFT JOIN laptops ON basket.product_id = laptops.id 
+   WHERE basket.customer_id=:user_id');
+   $querytot->execute(['user_id' => $user_id]);
+   $tot = $querytot->fetch(PDO::FETCH_ASSOC);
+
    echo "Logged in user: ".$_SESSION['logged_in_user_name']."<br>";
    echo "Total number of items in basket: ".$sum['total']."<br><br>";
 
@@ -39,5 +45,8 @@
 }
    
 echo '</table>';
+
+echo "<br><br>";
+echo "Total amount: ".$tot['totgen']."<br><br>";
 
 ?>
