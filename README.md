@@ -14,9 +14,9 @@ Done:
 20. Als klant wil ik de inhoud van mijn winkelmandje kunnen raadplegen.
 21. Als klant wil ik items uit mijn winkelmandje kunnen verwijderen.
 22. Als klant wil ik de hoeveelheid van elk item in mijn winkelmandje kunnen wijzigen.
+23. Als klant wil ik op de introductiepagina kunnen zien hoeveel items er in mijn winkelmandje zitten.
 
 Working on:
-23. Als klant wil ik op de introductiepagina kunnen zien hoeveel items er in mijn winkelmandje zitten.
 
 To do:
 7. Als beheerder wil ik de totale omzet van de webshop over een bepaalde periode kunnen raadplegen, zodat ik kan beoordelen of de shop goed draait.

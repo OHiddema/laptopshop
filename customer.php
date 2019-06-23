@@ -1,3 +1,8 @@
+   <?php
+      require_once('connect.php');
+      require_once('mod_functions.php');
+   ?>
+   
    <script>
       function getdata() {
          var http = new XMLHttpRequest();
@@ -33,6 +38,8 @@
       if (isset($_SESSION['logged_in_user_name'])) {
          echo "Logged in user: ".$_SESSION['logged_in_user_name'];
          echo " <a href='?page=basket.php'>Check my basket</a>";
+         $size = getBasketSize($conn);
+         echo "($size)";
       } else {
          echo "No user is logged in.";
       }
