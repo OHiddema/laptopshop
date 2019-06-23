@@ -12,10 +12,10 @@ Done:
 26. Als klant wil ik kunnen inloggen, zodat ik mijn algemene gegevens slechts eenmaal in hoef te vullen.
 19. Als klant wil ik een product, zoals getoond op de overzichtspagina, kunnen selecteren, zodat ik deze aan mijn winkelmandje toe kan voegen.
 20. Als klant wil ik de inhoud van mijn winkelmandje kunnen raadplegen.
-
-Working on:
 21. Als klant wil ik items uit mijn winkelmandje kunnen verwijderen.
 22. Als klant wil ik de hoeveelheid van elk item in mijn winkelmandje kunnen wijzigen.
+
+Working on:
 23. Als klant wil ik op de introductiepagina kunnen zien hoeveel items er in mijn winkelmandje zitten.
 
 To do:
