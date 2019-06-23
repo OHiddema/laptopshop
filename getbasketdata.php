@@ -1,5 +1,6 @@
 <?php
    include_once('connect.php');
+   require_once('mod_functions.php');
    session_start();
 
    $basket_id = $_POST["basket_id"];
@@ -20,11 +21,6 @@
    WHERE basket.customer_id=:user_id');
    $query->execute(['user_id' => $customer_id]);
 
-   $querysum = $conn->prepare('SELECT  SUM(basket.amount) AS total FROM basket 
-   LEFT JOIN laptops ON basket.product_id = laptops.id WHERE basket.customer_id=:user_id');
-   $querysum->execute(['user_id' => $customer_id]);
-   $sum = $querysum->fetch(PDO::FETCH_ASSOC);
-
    $querytot = $conn->prepare('SELECT SUM(basket.amount * laptops.price) as totgen 
    FROM basket LEFT JOIN laptops ON basket.product_id = laptops.id 
    WHERE basket.customer_id=:user_id');
@@ -33,10 +29,11 @@
 
    echo "Logged in user: ".$_SESSION['logged_in_user_name']."<br>";
 
-   if ($sum['total']==0) {
+   $size = getBasketSize($conn);
+   if ($size==0) {
       echo "<h2>Your basket is empty!<h2>";
    } else {
-      echo "Total number of items in basket: ".$sum['total']."<br><br>";
+      echo "Total number of items in basket: ".$size."<br><br>";
 
       echo '<table border ="2">';
       echo '<tr>';
