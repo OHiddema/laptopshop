@@ -65,5 +65,5 @@
 echo '</table>';
 
 echo "<br>";
-echo "Total amount: ".$tot['totgen']."<br><br>";
+echo "Total amount: ".$tot['totgen']."<br>";
 

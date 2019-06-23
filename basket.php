@@ -18,8 +18,10 @@
       http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");   
       http.send(params);
    }
-   
+
    getdata();
 </script>
 
 <p id='resultset'></p>
+
+<a href="?page=customer.php">Back to shop</a>

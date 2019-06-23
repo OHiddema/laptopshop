@@ -31,7 +31,11 @@
       }
   
    $conn = null;
-?>
 
-<br>
-<a href="?page=customer.php">Back</a>
+   // Redirect to shop
+   $page = '?page=customer.php';
+   $host  = $_SERVER['HTTP_HOST'];
+   $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+   header("Location: http://$host$uri/$page");
+   exit;
+?>
