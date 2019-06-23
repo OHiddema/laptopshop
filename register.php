@@ -1,3 +1,5 @@
+<h1>Register</h1>
+<hr>
 <form method="POST" action="adduser.php">
    Username: <input type="text" name="username" id="username"><br><br>
    Email: <input type="email" name="email" id="email"><br><br>

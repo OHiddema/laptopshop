@@ -22,6 +22,9 @@
    getdata();
 </script>
 
+<h1>Basket</h1>
+<hr>
+
 <p id='resultset'></p>
 
 <a href="?page=customer.php">Back to shop</a>
