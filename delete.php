@@ -6,14 +6,17 @@ $id = $_GET['id'];
 try {
    $stmt = $conn->prepare('DELETE FROM laptops WHERE id=:id');
    $stmt->execute(['id' => $id]);
-   echo "Record deleted successfully";
    }
 catch(PDOException $e)
    {
    echo 'DELETE FROM query' . "<br>" . $e->getMessage();
    }
 $conn = null;
-?>
 
-<br>
-<a href="?page=viewall.php">Back</a>
+// redirect
+$page = '?page=viewall.php';
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+header("Location: http://$host$uri/$page");
+exit;
+?>

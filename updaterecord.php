@@ -15,8 +15,6 @@
    try {
       $stmt = $conn->prepare("UPDATE laptops SET brand=:brand, name=:name, price=:price, memory=:memory, blnactive=:blnactive, category=:category WHERE id=:id");
       $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'blnactive' => $blnactive, 'category' => $category, 'id' => $id]);
-
-      echo "Record updated successfully<br>";
       }
    catch(PDOException $e)
       {
@@ -24,7 +22,11 @@
       }
   
    $conn = null;
-?>
 
-<br>
-<a href="?page=viewall.php">Back</a>
+   // redirect
+   $page = '?page=viewall.php';
+   $host  = $_SERVER['HTTP_HOST'];
+   $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+   header("Location: http://$host$uri/$page");
+   exit;
+?>

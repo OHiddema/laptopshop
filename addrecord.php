@@ -14,7 +14,6 @@
    try {
       $stmt = $conn->prepare('INSERT INTO laptops (brand, name, price, memory, blnactive, category) VALUES (:brand, :name, :price, :memory, :blnactive, :category)');
       $stmt->execute(['brand' => $brand, 'name' => $name, 'price' => $price, 'memory' => $memory, 'blnactive' => $blnactive, 'category' => $category]);
-      echo "New record created successfully<br>";
       }
    catch(PDOException $e)
       {
@@ -22,7 +21,11 @@
       }
   
    $conn = null;
-?>
 
-<br>
-<a href="?page=viewall.php">Back</a>
+   // redirect
+   $page = '?page=viewall.php';
+   $host  = $_SERVER['HTTP_HOST'];
+   $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+   header("Location: http://$host$uri/$page");
+   exit;
+?>
