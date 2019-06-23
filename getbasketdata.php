@@ -32,38 +32,42 @@
    $tot = $querytot->fetch(PDO::FETCH_ASSOC);
 
    echo "Logged in user: ".$_SESSION['logged_in_user_name']."<br>";
-   echo "Total number of items in basket: ".$sum['total']."<br><br>";
 
-   echo '<table border ="2">';
-   echo '<tr>';
+   if ($sum['total']==0) {
+      echo "<h2>Your basket is empty!<h2>";
+   } else {
+      echo "Total number of items in basket: ".$sum['total']."<br><br>";
 
-   echo '<th>name</th>';
-   echo '<th>amount</th>';
-   echo '<th>price</th>';
-   echo '<th>total</th>';
-
-   echo '</tr>';
-
-   while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-
+      echo '<table border ="2">';
       echo '<tr>';
-      foreach($row as $key=>$field) {
-         if ($key=='id') {
-            // do nothing
-         } elseif ($key=='amount') {
-            echo "<td><input type='number' id='amount' value='".$field.
-            "' onchange='getdata(".$row['id'].",this.value".")'></td>";
-            
-         } else {
-            echo "<td>" . $field . "</td>";
-         }
-      }      
+
+      echo '<th>name</th>';
+      echo '<th>amount</th>';
+      echo '<th>price</th>';
+      echo '<th>total</th>';
+
       echo '</tr>';
+
+      while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+
+         echo '<tr>';
+         foreach($row as $key=>$field) {
+            if ($key=='id') {
+               // do nothing
+            } elseif ($key=='amount') {
+               echo "<td><input type='number' id='amount' value='".$field.
+               "' onchange='getdata(".$row['id'].",this.value".")'></td>";
+               
+            } else {
+               echo "<td>" . $field . "</td>";
+            }
+         }      
+         echo '</tr>';
+         
+      }
       
-}
-   
-echo '</table>';
+      echo '</table>';
 
-echo "<br>";
-echo "Total amount: ".$tot['totgen']."<br>";
-
+      echo "<br>";
+      echo "Total amount: ".$tot['totgen']."<br>";
+   }   
