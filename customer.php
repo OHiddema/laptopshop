@@ -34,7 +34,7 @@
    <hr>
    <!-- display logged in user -->
    <?php
-      session_start();
+      // session_start();
       if (isset($_SESSION['logged_in_user_name'])) {
          echo "Logged in user: ".$_SESSION['logged_in_user_name'];
          echo " <a href='?page=basket.php'>Check my basket</a>";

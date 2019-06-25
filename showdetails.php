@@ -1,6 +1,6 @@
 <?php
    require_once('connect.php');
-   session_start();
+   // session_start();
    $product_id = $_GET['id'];
    $username = $_SESSION['logged_in_user_name'];
 

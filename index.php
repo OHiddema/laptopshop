@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(isset($_REQUEST['page'])) {
         $page = $_REQUEST['page'];
     } else $page = 'homepage.php';
