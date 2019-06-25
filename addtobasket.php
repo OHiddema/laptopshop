@@ -36,6 +36,6 @@
    $page = '?page=customer.php';
    $host  = $_SERVER['HTTP_HOST'];
    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-   header("Location: http://$host$uri/$page");
+   echo "<script>window.location = 'http://$host$uri/$page' ;</script>";
    exit;
 ?>
