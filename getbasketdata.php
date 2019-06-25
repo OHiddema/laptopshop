@@ -1,7 +1,7 @@
 <?php
+   session_start();
    include_once('connect.php');
    require_once('mod_functions.php');
-   session_start();
 
    $basket_id = $_POST["basket_id"];
    $amount = $_POST["amount"];
