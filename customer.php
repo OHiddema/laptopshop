@@ -36,10 +36,14 @@
    <?php
       // session_start();
       if (isset($_SESSION['logged_in_user_name'])) {
-         echo "Logged in user: ".$_SESSION['logged_in_user_name'];
-         echo " <a href='?page=basket.php'>Check my basket</a>";
+         echo "Logged in user: ".$_SESSION['logged_in_user_name']."<br>";
          $size = getBasketSize($conn);
-         echo "($size)";
+         if ($size==0) {
+            echo "Your basket is empty!";
+         } else {
+            echo " <a href='?page=basket.php'>Check my basket</a>";
+            echo "($size)";   
+         }
       } else {
          echo "No user is logged in.";
       }
