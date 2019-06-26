@@ -7,7 +7,7 @@
    $price =  $_POST['price'];
    $memory = $_POST['memory'];
 
-   // Set blnzactive to zero (false) is checkbox is unchecked
+   // Set blnactive to zero (false) is checkbox is unchecked
    $blnactive = (isset($_POST['blnactive'])) ? $_POST['blnactive'] : 0;
 
    $category = $_POST['category'];
