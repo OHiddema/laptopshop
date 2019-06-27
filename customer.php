@@ -32,21 +32,16 @@
 
    <h1>Filter laptops</h1>
    <hr>
-   <!-- <a href="?page=homepage.php">Home</a><br> -->
 
-   <!-- display logged in user -->
+   <!-- display basket size -->
    <?php
-      // session_start();
       if (isset($_SESSION['logged_in_user_name'])) {
-         echo "Logged in user: ".$_SESSION['logged_in_user_name']."<br>";
          $size = getBasketSize($conn);
          if ($size==0) {
             echo "Your basket is empty!";
          } else {
             echo " <a href='?page=basket.php'>Check my basket($size)</a>";
          }
-      } else {
-         echo "No user is logged in.";
       }
       echo "<br><br>";   
    ?>

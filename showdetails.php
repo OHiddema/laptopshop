@@ -1,11 +1,7 @@
 <?php
    require_once('connect.php');
-   // session_start();
    $product_id = $_GET['id'];
    $username = $_SESSION['logged_in_user_name'];
-
-   // var_dump($product_id);
-   // var_dump($user_id);   
 
    try {
       $stmt = $conn->prepare('SELECT * FROM laptops WHERE id=:id');
@@ -18,7 +14,6 @@
       }
    $conn = null;
 
-   echo "Username: $username<br>";
    // show product details
    echo "<h3>Product details:</h3>";
    echo 'Brand: ' . $res['brand'] . '<br>';
