@@ -7,7 +7,7 @@ $sql = "SELECT * FROM laptops";
 $query = $conn->query($sql);
 ?>
 
-<button><a href="?page=addpage.php">Add record</a></button><br><br>
+<button><a href="?page=addpage.php"><i class="fas fa-plus-square"></i></a></button><br><br>
 
 <table border ="2">
 <tr>
@@ -32,8 +32,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
    } else echo "<td>" . $field . "</td>";
 }
 ?>
-<td> <button><a href="?page=delete.php&id=<?=$row['id']?>">Delete</a></button></td>
-<td> <button><a href="?page=editpage.php&id=<?=$row['id']?>">Edit</a></button></td>
+<td> <button><a href="?page=delete.php&id=<?=$row['id']?>"><i class="fas fa-trash-alt"></i></a></button></td>
+<td> <button><a href="?page=editpage.php&id=<?=$row['id']?>"><i class="fas fa-edit"></i></a></button></td>
 </tr>
 
 <?php } ?>

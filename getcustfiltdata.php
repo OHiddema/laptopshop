@@ -41,7 +41,7 @@
       }      
 
       ?>
-      <td> <button><a href="?page=showdetails.php&id=<?=$row['id']?>">Show details</a></button></td>
+      <td> <button><a href="?page=showdetails.php&id=<?=$row['id']?>"><i class="fas fa-info-circle fa-lg"></i></a></button></td>
       <?php
 
       echo '</tr>';
