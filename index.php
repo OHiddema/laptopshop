@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    require_once('connect.php');
+    require_once('mod_functions.php');
+
     if(isset($_REQUEST['page'])) {
         $page = $_REQUEST['page'];
     } else $page = 'homepage.php';
@@ -22,10 +26,17 @@
     <body>
         <header>
             <div class='myflex'>
-                <a href="?page=homepage.php" style='text-decoration:none'>Laptopshop</a></br><br>
+                <a href="?page=homepage.php" style='text-decoration:none'>Laptopshop</a>
+
                 <?php
-                    if(isset($_SESSION['logged_in_user_name'])) {
-                        echo "Logged in user: ".$_SESSION['logged_in_user_name'];
+                if(isset($_SESSION['logged_in_user_name'])) {
+
+                    $size = getBasketSize($conn);
+                    if ($size==0) {
+                       echo "<p>Your basket is empty!</p>";
+                    } else echo "<a href='?page=basket.php'>Check my basket($size)</a>";
+
+                    echo "Logged in user: ".$_SESSION['logged_in_user_name'];
                     } else echo "No customer logged in";
                 ?>
             </div>

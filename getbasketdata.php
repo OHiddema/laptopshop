@@ -27,14 +27,10 @@
    $querytot->execute(['user_id' => $customer_id]);
    $tot = $querytot->fetch(PDO::FETCH_ASSOC);
 
-   echo "Logged in user: ".$_SESSION['logged_in_user_name']."<br>";
-
    $size = getBasketSize($conn);
    if ($size==0) {
       echo "<h2>Your basket is empty!<h2>";
    } else {
-      echo "Total number of items in basket: ".$size."<br><br>";
-
       echo '<table border ="2">';
       echo '<tr>';
 
