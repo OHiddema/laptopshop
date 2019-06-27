@@ -49,7 +49,7 @@
                // do nothing
             } elseif ($key=='amount') {
                echo "<td><input type='number' id='amount' value='".$field.
-               "' onchange='getdata(".$row['id'].",this.value".")'></td>";
+               "' onchange='getdata(".$row['id'].",this.value".",true)'></td>";
                
             } else {
                echo "<td>" . $field . "</td>";

@@ -1,5 +1,5 @@
 <script>
-   function getdata(basket_id, amount) {
+   function getdata(basket_id, amount, refresh) {
       var http = new XMLHttpRequest();
       var url = 'getbasketdata.php';
       var params = "basket_id=" + basket_id + "&amount=" + amount; 
@@ -12,6 +12,9 @@
       http.onreadystatechange = function() {//Call a function when the state changes.
          if(http.readyState == 4 && http.status == 200) {
             document.getElementById("resultset").innerHTML = this.responseText;
+            if (refresh) {
+               location.reload();
+            }
          }
       }
 
