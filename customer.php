@@ -32,7 +32,7 @@
 
    <h1>Filter laptops</h1>
    <hr>
-   <a href="?page=homepage.php">Home</a><br>
+   <!-- <a href="?page=homepage.php">Home</a><br> -->
 
    <!-- display logged in user -->
    <?php

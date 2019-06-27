@@ -19,6 +19,9 @@
         </style>
     </head>
     <body>
+        <header>
+            <a href="?page=homepage.php" style='text-decoration:none'>Laptopshop</a></br><br>
+        </header>
         <?php include($page);?>
     </body>
 </html>

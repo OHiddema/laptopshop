@@ -1,7 +1,7 @@
 <h1>Login</h1>
 <hr>
 
-<a href="?page=homepage.php">Home</a></br><br>
+<!-- <a href="?page=homepage.php">Home</a></br><br> -->
 
 <form method="POST" action="checklogin.php">
    Username: <input type="text" name="username" id="username"><br><br>

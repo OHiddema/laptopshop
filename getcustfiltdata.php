@@ -12,7 +12,7 @@
       $query->execute(['price' => $obj->maxprijs, 'memory' => $obj->minmem, 'category' => $obj->category]);
    }
 
-   echo 'There are ' . $query->rowCount() . ' laptops matching your criteria:<br><br>';
+   echo 'There are ' . $query->rowCount() . ' laptops matching your criteria:<br>';
    
    echo '<table border ="2">';
    echo '<tr>';

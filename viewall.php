@@ -36,5 +36,5 @@ $query = $conn->query($sql);
 
 </table>
 
-<br>
-<a href="?page=homepage.php">Back to main page</a>
+<!-- <br>
+<a href="?page=homepage.php">Back to main page</a> -->
