@@ -38,7 +38,10 @@
                     } else {
                         echo "<a href='?page=basket.php'><i class='fas fa-shopping-cart fa-lg'>($size)</a></i>";
                     }
+                    echo "<p>";
                     echo "Logged in user: ".$_SESSION['logged_in_user_name'];
+                    echo "&nbsp;<a href='?page=logout.php'>Logout</a>";
+                    echo "</p>";
                     } else echo "No customer logged in";
                 ?>
             </div>
