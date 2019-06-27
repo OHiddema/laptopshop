@@ -55,12 +55,11 @@
                echo "<td>" . $field . "</td>";
             }
          }      
-         echo '</tr>';
-         
+         echo '</tr>';         
       }
-      
+      echo '<tr>';
+      echo '<td colspan="3" align="right"><b>Total amount:&nbsp;</b></td>';
+      echo '<td><b>'.$tot['totgen'].'</b></td>';
+      echo '</tr>';
       echo '</table>';
-
-      echo "<br>";
-      echo "Total amount: ".$tot['totgen']."<br>";
    }   
