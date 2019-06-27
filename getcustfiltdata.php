@@ -17,7 +17,6 @@
    echo '<table border ="2">';
    echo '<tr>';
 
-   echo '<th>id</th>';
    echo '<th>brand</th>';
    echo '<th>name</th>';
    echo '<th>price</th>';
@@ -30,8 +29,14 @@
 
       echo '<tr>';
       foreach($row as $key=>$field) {
-         if ($key != 'blnactive') {
-            echo "<td>" . $field . "</td>";
+         if ($key == 'id') {
+            // do nothing
+         } else {
+            if ($key != 'blnactive') {
+               if ($key == 'price' || $key == 'memory') {
+                  echo "<td class='number'>" . $field . "</td>";
+               } else echo "<td>" . $field . "</td>";
+            }
          }
       }      
 

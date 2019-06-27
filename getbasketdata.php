@@ -48,9 +48,10 @@
             if ($key=='id') {
                // do nothing
             } elseif ($key=='amount') {
-               echo "<td><input type='number' id='amount' value='".$field.
+               echo "<td class='number'><input type='number' id='amount' value='".$field.
                "' onchange='getdata(".$row['id'].",this.value".",true)'></td>";
-               
+            } elseif ($key!='name') {
+               echo "<td class='number'>" . $field . "</td>";
             } else {
                echo "<td>" . $field . "</td>";
             }

@@ -20,12 +20,16 @@ $query = $conn->query($sql);
 <th>category</th>
 </tr>
 
+<?php
+$numberNames = array("id", "price", "memory", "blnactive");
 
-<?php while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
 
 <tr>
-<?php foreach($row as $field) {
-   echo "<td>" . $field . "</td>";
+<?php foreach($row as $key => $field) {
+   if (in_array($key, $numberNames)) {
+      echo "<td class='number'>" . $field . "</td>";
+   } else echo "<td>" . $field . "</td>";
 }
 ?>
 <td> <button><a href="?page=delete.php&id=<?=$row['id']?>">Delete</a></button></td>
