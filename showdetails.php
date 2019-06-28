@@ -28,3 +28,6 @@
    ?>
    <input type="submit" value = "Add to basket">
 </form>
+
+<br>
+<a href="?page=customer.php">Back to shop</a>

@@ -36,15 +36,25 @@
    <div class='myGrid'>
       
       <div>
-         Maximal price: <input onchange='getdata()' id='maxprijs' type="number" min = "0" max="1000" step="100" value='1000'><br><br>
-         Minimal memory: <input onchange='getdata()' id='minmem' type="number" min = "4" max = "32" step = "4" value='4'><br><br>
+         <?php
+            $maxprijs = (isset($_SESSION['maxprijs']) ? $_SESSION['maxprijs'] : 1000);
+            $minmem = (isset($_SESSION['minmem']) ? $_SESSION['minmem'] : 4);
+            $category = (isset($_SESSION['category']) ? $_SESSION['category'] : 'All');
+
+            $catAll = ($category == 'All') ? "selected" : "";
+            $catB = ($category == 'B') ? "selected" : "";
+            $catA = ($category == 'A') ? "selected" : "";
+            $catP = ($category == 'P') ? "selected" : "";
+         ?>
+         Maximal price: <input onchange='getdata()' id='maxprijs' type="number" min = "0" max="1000" step="100" value='<?= $maxprijs ?>'><br><br>
+         Minimal memory: <input onchange='getdata()' id='minmem' type="number" min = "4" max = "32" step = "4" value='<?= $minmem ?>'><br><br>
 
          Category:
          <select onchange='getdata()' id='category'>
-            <option value="All" selected>All categories</option>
-            <option value="B">Budget</option>
-            <option value="A">Allround</option>
-            <option value="P">Professional</option>
+            <option value="All" <?= $catAll ?>>All categories</option>
+            <option value="B" <?= $catB ?>>Budget</option>
+            <option value="A" <?= $catA ?>>Allround</option>
+            <option value="P" <?= $catP ?>>Professional</option>
          </select>
          <br><br>
       </div>

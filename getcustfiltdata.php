@@ -1,8 +1,13 @@
 <?php
+   session_start();
    include_once('connect.php');
 
    header("Content-Type: application/json; charset=UTF-8");
    $obj = json_decode($_POST["x"], false);
+
+   $_SESSION['maxprijs'] = $obj->maxprijs;
+   $_SESSION['minmem'] = $obj->minmem;
+   $_SESSION['category'] = $obj->category;
 
    if($obj->category=='All') {
       $query = $conn->prepare('SELECT * FROM laptops WHERE price<=:price AND memory>=:memory AND blnactive="1"');
