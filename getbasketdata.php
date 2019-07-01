@@ -31,7 +31,7 @@
    if ($size==0) {
       echo "<h2>Your basket is empty!<h2>";
    } else {
-      echo '<table border ="2">';
+      echo '<table class="table table-sm table-striped table-nonfluid" border ="2">';
       echo '<tr>';
 
       echo '<th>name</th>';

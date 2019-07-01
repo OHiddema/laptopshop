@@ -9,7 +9,7 @@ $query = $conn->query($sql);
 
 <button><a href="?page=addpage.php"><i class="fas fa-plus-square"></i></a></button><br><br>
 
-<table border ="2">
+<table class="table table-sm table-striped table-nonfluid" border ="2">
 <tr>
 <th>id</th>
 <th>brand</th>
@@ -18,6 +18,8 @@ $query = $conn->query($sql);
 <th>memory</th>
 <th>active</th>
 <th>category</th>
+<th>delete</th>
+<th>edit</th>
 </tr>
 
 <?php

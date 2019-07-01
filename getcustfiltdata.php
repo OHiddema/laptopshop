@@ -19,14 +19,15 @@
 
    echo 'There are ' . $query->rowCount() . ' laptops matching your criteria:<br>';
    
-   echo '<table border ="2">';
+   echo '<table class="table table-sm table-striped table-nonfluid" border ="2">';
    echo '<tr>';
 
    echo '<th>brand</th>';
    echo '<th>name</th>';
    echo '<th>price</th>';
    echo '<th>memory</th>';   
-   echo '<th>category</th>';   
+   echo '<th>category</th>';
+   echo '<th>details</th>';   
 
    echo '</tr>';
 

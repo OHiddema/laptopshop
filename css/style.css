@@ -12,6 +12,7 @@ td.number {
    text-align: right;
 }
 
-th, td {
-   padding: 0 3px;
+/* Overrulen van Bootstrap, waarbij tables standaard de volledige breedte van de container innemen */
+.table-nonfluid {
+   width: auto !important;
 }
