@@ -12,12 +12,21 @@
     $legalPages = array('homepage.php', 'register.php', 'login.php', 'checklogin.php', 'adduser.php');
     if (!in_array($page, $legalPages) && !isset($_SESSION['logged_in_user_name'])) {
         // redirect to homepage
-        $page = '?page=homepage.php';
+        $page = '?page=homepage.php&login=false';
         $host  = $_SERVER['HTTP_HOST'];
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         echo "<script>window.location = 'http://$host$uri/$page' ;</script>";
         exit;        
     }
+
+    function alert($string){
+        return "<script>alert('".$string."');</script>";
+    }
+
+    if(isset($_REQUEST['login'])) {
+        echo alert("U bent niet ingelogd!");
+    }
+    
 ?>
 
 <!DOCTYPE html>
