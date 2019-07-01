@@ -19,10 +19,6 @@
         exit;        
     }
 
-    function alert($string){
-        return "<script>alert('".$string."');</script>";
-    }
-
     if(isset($_REQUEST['login'])) {
         echo alert("U bent niet ingelogd!");
     }

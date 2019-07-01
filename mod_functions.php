@@ -8,3 +8,7 @@ function getBasketSize($conn) {
    $sum = $querysum->fetch(PDO::FETCH_ASSOC);
    return $sum['total'];
 }
+
+function alert($string){
+   return "<script>alert('".$string."');</script>";
+}
