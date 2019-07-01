@@ -8,9 +8,9 @@
         $page = $_REQUEST['page'];
     } else $page = 'homepage.php';
 
-    if ($page != 'homepage.php' && $page != 'register.php' && $page != 'login.php' 
-    && $page != 'checklogin.php' && $page != 'adduser.php' 
-    && !isset($_SESSION['logged_in_user_name'])) {
+    //blocking all pages except $legalPages when not logged in
+    $legalPages = array('homepage.php', 'register.php', 'login.php', 'checklogin.php', 'adduser.php');
+    if (!in_array($page, $legalPages) && !isset($_SESSION['logged_in_user_name'])) {
         // redirect to homepage
         $page = '?page=homepage.php';
         $host  = $_SERVER['HTTP_HOST'];
