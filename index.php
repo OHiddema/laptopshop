@@ -7,6 +7,17 @@
     if(isset($_REQUEST['page'])) {
         $page = $_REQUEST['page'];
     } else $page = 'homepage.php';
+
+    if ($page != 'homepage.php' && $page != 'register.php' && $page != 'login.php' 
+    && $page != 'checklogin.php' && $page != 'adduser.php' 
+    && !isset($_SESSION['logged_in_user_name'])) {
+        // redirect to homepage
+        $page = '?page=homepage.php';
+        $host  = $_SERVER['HTTP_HOST'];
+        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        echo "<script>window.location = 'http://$host$uri/$page' ;</script>";
+        exit;        
+    }
 ?>
 
 <!DOCTYPE html>
