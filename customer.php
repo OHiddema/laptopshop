@@ -46,17 +46,30 @@
             $catA = ($category == 'A') ? "selected" : "";
             $catP = ($category == 'P') ? "selected" : "";
          ?>
-         Maximal price: <input onchange='getdata()' id='maxprijs' type="number" min = "0" max="1000" step="100" value='<?= $maxprijs ?>'><br><br>
-         Minimal memory: <input onchange='getdata()' id='minmem' type="number" min = "4" max = "32" step = "4" value='<?= $minmem ?>'><br><br>
 
-         Category:
-         <select onchange='getdata()' id='category'>
-            <option value="All" <?= $catAll ?>>All categories</option>
-            <option value="B" <?= $catB ?>>Budget</option>
-            <option value="A" <?= $catA ?>>Allround</option>
-            <option value="P" <?= $catP ?>>Professional</option>
-         </select>
-         <br><br>
+         <div class='container'>
+            <form>
+               <div class="form-group">
+                  <label for="maxprice">Maximal price:</label>
+                  <input class="form-control" onchange='getdata()' id='maxprijs' type="number" min = "0" max="1000" step="100" value='<?= $maxprijs ?>'>
+               </div>
+
+               <div class="form-group">
+                  <label for="minmem">Minimal memory:</label>
+                  <input class="form-control" onchange='getdata()' id='minmem' type="number" min = "4" max="32" step="4" value='<?= $minmem ?>'>
+               </div>
+
+               <div class="form-group">
+                  <label for="category">Category:</label>
+                  <select class="form-control" onchange='getdata()' id='category'>
+                     <option value="All" <?= $catAll ?>>All categories</option>
+                     <option value="B" <?= $catB ?>>Budget</option>
+                     <option value="A" <?= $catA ?>>Allround</option>
+                     <option value="P" <?= $catP ?>>Professional</option>
+                  </select>
+               </div>
+            </form>
+         </div>
       </div>
 
       <!-- Select all data when page loads -->
