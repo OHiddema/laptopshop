@@ -20,7 +20,7 @@
     }
 
     if(isset($_REQUEST['login'])) {
-        echo alert("U bent niet ingelogd!");
+        echo alert("You are not logged in!");
     }
     
 ?>
@@ -58,7 +58,7 @@
                     echo "Logged in user: ".$_SESSION['logged_in_user_name'];
                     echo "&nbsp;<a href='?page=logout.php'>Logout</a>";
                     echo "</p>";
-                    } else echo "No customer logged in";
+                    } else echo "Logged out";
                 ?>
             </div>
         </header>
