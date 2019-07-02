@@ -13,19 +13,18 @@
       echo $sql . "<br>" . $e->getMessage();
       }
    $conn = null;
-
-   // show product details
-   echo "<h3>Product details:</h3>";
-   echo 'Brand: ' . $res['brand'] . '<br>';
-   echo 'Name: ' . $res['name'] . '<br>';
-   echo 'Price: ' . $res['price'] . '<br>';
-   echo 'Memory: ' . $res['memory'] . '<br>';
 ?>
+
+<!-- show product details -->
+<h3>Product details:</h3>
+Brand: <?= $res['brand'] ?><br>
+Name: <?= $res['name'] ?><br>
+Price: <?= $res['price'] ?><br>
+Memory: <?= $res['memory'] ?><br>
+
 <form action = "?page=addtobasket.php" method = "POST">
-   <?php
-      echo '<input type="hidden", name="id", value="' . $res['id'] . '">';
-      echo 'Quantity: <input type="number" name="amount" min="1", step="1", value="1"><br><br>';
-   ?>
+   <input type="hidden", name="id", value="<?= $res['id'] ?>">
+   Quantity: <input type="number" name="amount" min="1", step="1", value="1"><br><br>
    <input type="submit" value = "Add to basket">
 </form>
 
