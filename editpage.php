@@ -19,7 +19,9 @@ $conn = null;
 <hr>
 <form action = "?page=updaterecord.php" method = "POST">
    <?php
-   echo 'ID: <input type="text", name="id", value="' . $res['id'] . '" readonly> (read-only)<br><br>';
+   // echo 'ID: <input type="text", name="id", value="' . $res['id'] . '" readonly> (read-only)<br><br>';
+   echo '<input style="display:none" type="text", name="id", value="' . $res['id'] . '" readonly>';
+
    echo 'Brand: <input type="text" name="brand" value="' . $res['brand'] . '"><br><br>';
    echo 'Name: <input type="text" name="name" value="' . $res['name'] . '"><br><br>';
    echo 'Price: <input type = "number" name = "price" value="' . $res['price'] . '"><br><br>';
