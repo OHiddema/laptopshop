@@ -6,11 +6,3 @@
    <button type="submit" class="btn btn-primary">Login</button>
 </form>
 <br>
-
-<div id='loginresult'>
-   <?php
-      if (isset($_SESSION['logged_in_user_name'])) {
-         echo "<a href='?page=customer.php'>Go to store</a>";
-      }
-   ?>
-</div>
