@@ -18,27 +18,32 @@ $conn = null;
 <h1>Update laptop</h1>
 <hr>
 <form action = "?page=updaterecord.php" method = "POST">
+   <input type="text", name="id", value="<?= $res['id'] ?>" style="display:none">
+   Brand: <input type="text" name="brand" value="<?= $res['brand'] ?>"><br><br>
+
+   Name: <input type="text" name="name" value="<?= $res['name'] ?>"><br><br>
+   Price: <input type = "number" name = "price" value="<?= $res['price'] ?>"><br><br>
+   Memory (GB): <input type="number" name="memory" min = "4" max = "32" step = "4" value="<?= $res['memory'] ?>"><br><br>
+   
    <?php
-   // echo 'ID: <input type="text", name="id", value="' . $res['id'] . '" readonly> (read-only)<br><br>';
-   echo '<input style="display:none" type="text", name="id", value="' . $res['id'] . '" readonly>';
-
-   echo 'Brand: <input type="text" name="brand" value="' . $res['brand'] . '"><br><br>';
-   echo 'Name: <input type="text" name="name" value="' . $res['name'] . '"><br><br>';
-   echo 'Price: <input type = "number" name = "price" value="' . $res['price'] . '"><br><br>';
-   echo 'Memory (GB): <input type="number" name="memory" min = "4" max = "32" step = "4" value="' . $res['memory'] . '"><br><br>';
    $checked = ($res['blnactive']==1) ? 'checked' : '';
-   echo 'Active: <input type = "checkbox" name = "blnactive" value="1" ' . $checked . '><br><br>';
+   ?>
 
+   Active: <input type = "checkbox" name = "blnactive" value="1" <?= $checked ?>><br><br>
+
+   <?php
    $b = ($res['category']=='B') ? 'selected' : '';
    $a = ($res['category']=='A') ? 'selected' : '';
    $p = ($res['category']=='P') ? 'selected' : '';
-   echo 'Category: <select name="category">'.
-   "<option value='B' $b>Budget</option>".
-   "<option value='A' $a>Allround</option>".
-   "<option value='P' $p>Professional</option>".
-   '</select><br><br>'
-
    ?>
+   
+   Category: <select name="category">
+   <option value='B' <?=$b?>>Budget</option>
+   <option value='A' <?=$a?>>Allround</option>
+   <option value='P' <?=$p?>>Professional</option>
+   </select><br><br>
+
+   
    <input type="submit" value = "update">
 </form>
 <br>
