@@ -25,7 +25,7 @@
       $_SESSION['logged_in_user_id'] = $row['id'];
       $_SESSION['logged_in_user_name'] = $row['username'];
       // redirection page
-      $page = '?page=customer.php';
+      $page = '?page=homepage.php';
    }
 
    // redirect
