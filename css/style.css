@@ -16,3 +16,8 @@ td.number {
 .table-nonfluid {
    width: auto !important;
 }
+
+body {
+   margin: 8px;
+   background-color: lightskyblue;
+}
