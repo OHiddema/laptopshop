@@ -49,7 +49,7 @@
       </div>
    </div>
 
-   <input type="submit" value = "add">
+   <input type="submit" class="btn btn-primary" value ="add">
 </form>
 <br>
 <a href="?page=viewall.php">Back</a>

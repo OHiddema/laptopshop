@@ -77,7 +77,7 @@ $conn = null;
          </div>
    </div> 
 
-   <input type="submit" value = "update">
+   <input type="submit" class="btn btn-primary" value = "Update">
 </form>
 <br>
 <a href="?page=viewall.php">Back</a>

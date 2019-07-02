@@ -7,7 +7,8 @@ $sql = "SELECT * FROM laptops";
 $query = $conn->query($sql);
 ?>
 
-<button><a href="?page=addpage.php"><i class="fas fa-plus-square"></i></a></button><br><br>
+<a class="btn btn-primary" href="?page=addpage.php" role="button">Add new</a><br><br>
+<!-- <button><a href="?page=addpage.php"><i class="fas fa-plus-square"></i></a></button><br><br> -->
 
 <table class="table table-sm table-striped table-nonfluid" border ="2">
 <tr>
