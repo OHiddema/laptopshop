@@ -43,7 +43,6 @@ $conn = null;
    <option value='P' <?=$p?>>Professional</option>
    </select><br><br>
 
-   
    <input type="submit" value = "update">
 </form>
 <br>
