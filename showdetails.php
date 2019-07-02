@@ -16,11 +16,28 @@
 ?>
 
 <!-- show product details -->
-<h3>Product details:</h3>
-Brand: <?= $res['brand'] ?><br>
-Name: <?= $res['name'] ?><br>
-Price: <?= $res['price'] ?><br>
-Memory: <?= $res['memory'] ?><br>
+
+<h1>Product details</h1>
+<hr>
+
+<table class="table table-sm table-nonfluid" border ="2">
+   <tr>
+      <td>Brand</td>
+      <td><?= $res['brand'] ?></td>
+   </tr>
+   <tr>
+      <td>Name</td>
+      <td><?= $res['name'] ?></td>
+   </tr>
+   <tr>
+      <td>Price</td>
+      <td><?= $res['price'] ?></td>
+   </tr>
+   <tr>
+      <td>Memory</td>
+      <td><?= $res['memory'] ?></td>
+   </tr>
+</table>
 
 <form action = "?page=addtobasket.php" method = "POST">
    <input type="hidden", name="id", value="<?= $res['id'] ?>">
