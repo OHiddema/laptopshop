@@ -37,7 +37,3 @@ To do:
 29. Als klant wil ik de historie van mijn bestellingen kunnen zien, zodat ik mij bekende artikelen eenvoudig opnieuw kan bestellen.
 30. Als klant wil ik gekochte producten kunnen beoordelen, zodat toekomstige klanten en betere keuze kunnen maken en de beheerder hierop eventueel actie kan ondernemen.
 31. Als klant wil ik de status van mijn bestelling kunnen volgen, zodat ik kan zien of de bestelling op tijd kan worden geleverd.
-
-Irrelevant user stories (?)
-14. Als klant wil ik bij het starten van de applicatie een introductiepagina van de shop zien, zodat ik weet wat deze shop inhoudt.
-17. Als klant wil ik op de overzichtspagina middels een zoekveld producten kunnen filteren, zodat ik producten kan vinden die aan mijn wensen voldoen. Dit zoekveld filtert over alle eigenschappen van de producten.
