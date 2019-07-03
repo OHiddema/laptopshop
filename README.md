@@ -1,3 +1,6 @@
+Live link to this project:
+https://oegehiddema.nl/projects/laptopshop/
+
 Laptopshop – user story's
 
 Done:
@@ -15,6 +18,7 @@ Done:
 21. Als klant wil ik items uit mijn winkelmandje kunnen verwijderen.
 22. Als klant wil ik de hoeveelheid van elk item in mijn winkelmandje kunnen wijzigen.
 23. Als klant wil ik op de introductiepagina kunnen zien hoeveel items er in mijn winkelmandje zitten.
+32. Als beheerder wil ik geen producten mogen verwijderen zolang deze nog in het winkelmandje van een gebruiker zit.
 
 Working on:
 
