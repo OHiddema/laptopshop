@@ -2,7 +2,7 @@
    session_start();
    require_once('connect.php');
 
-   $username = $_POST['username'];
+   $username = htmlspecialchars($_POST['username']);
    $password = $_POST['password'];
 
    try {

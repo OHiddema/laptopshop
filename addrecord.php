@@ -1,10 +1,10 @@
 <?php
    require_once('connect.php');
 
-   $brand = $_POST['brand'];
-   $name = $_POST['name'];
-   $price =  $_POST['price'];
-   $memory = $_POST['memory'];
+   $brand = htmlspecialchars($_POST['brand']);
+   $name = htmlspecialchars($_POST['name']);
+   $price =  htmlspecialchars($_POST['price']);
+   $memory = htmlspecialchars($_POST['memory']);
 
    // Set blnzactive to zero (false) is checkbox is unchecked
    $blnactive = (isset($_POST['blnactive'])) ? $_POST['blnactive'] : 0;
