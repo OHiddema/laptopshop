@@ -15,7 +15,7 @@
         $page = '?page=homepage.php&login=false';
         $host  = $_SERVER['HTTP_HOST'];
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        echo "<script>window.location = 'http://$host$uri/$page' ;</script>";
+        header("Location: http://$host$uri/$page");
         exit;        
     }
 
