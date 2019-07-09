@@ -39,7 +39,7 @@
    </tr>
 </table>
 
-<form action = "?page=addtobasket.php" method = "POST">
+<form action = "addtobasket.php" method = "POST">
    <input type="hidden", name="id", value="<?= $res['id'] ?>">
    Quantity: <input type="number" name="amount" min="1", step="1", value="1"><br><br>
    <input type="submit" value = "Add to basket">

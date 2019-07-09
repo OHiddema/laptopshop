@@ -17,7 +17,7 @@ $conn = null;
 
 <h1>Update laptop</h1>
 <hr>
-<form action = "?page=updaterecord.php" method = "POST">
+<form action = "updaterecord.php" method = "POST">
    <!-- id not displayed, but necessary to put in form, for POST -->
    <input type="text", name="id", value="<?= $res['id'] ?>" style="display:none">
 

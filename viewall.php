@@ -34,7 +34,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
    } else echo "<td>" . $field . "</td>";
 }
 ?>
-<td> <button><a href="?page=delete.php&id=<?=$row['id']?>"><i class="fas fa-trash-alt"></i></a></button></td>
+<td> <button><a href="delete.php?id=<?=$row['id']?>"><i class="fas fa-trash-alt"></i></a></button></td>
 <td> <button><a href="?page=editpage.php&id=<?=$row['id']?>"><i class="fas fa-edit"></i></a></button></td>
 </tr>
 

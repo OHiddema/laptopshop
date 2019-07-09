@@ -15,7 +15,7 @@
         $page = '?page=homepage.php&login=false';
         $host  = $_SERVER['HTTP_HOST'];
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        echo "<script>window.location = 'http://$host$uri/$page' ;</script>";
+        header("Location: http://$host$uri/$page");
         exit;        
     }
 
@@ -56,7 +56,7 @@
                     }
                     echo "<p>";
                     echo "Logged in user: ".$_SESSION['logged_in_user_name'];
-                    echo "&nbsp;<a href='?page=logout.php'>Logout</a>";
+                    echo "&nbsp;<a href='logout.php'>Logout</a>";
                     echo "</p>";
                     } else echo "Logged out";
                 ?>

@@ -1,6 +1,6 @@
 <h1>Add laptop</h1>
 <hr>
-<form action = "?page=addrecord.php" method = "POST">
+<form action = "addrecord.php" method = "POST">
    <div class="form-group row">
       <label for="brand" class="col-sm-2 col-form-label">Brand:</label>
       <div class="col-sm-6">
