@@ -15,11 +15,6 @@
       //If so: redirect to register page
 
       redirect('?page=login.php');
-      // $host  = $_SERVER['HTTP_HOST'];
-      // $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-      // $page = '?page=login.php';
-      // header("Location: http://$host$uri/$page");
-      // exit;
       }
    catch(PDOException $e)
       {
