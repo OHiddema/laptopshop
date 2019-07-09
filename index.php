@@ -4,6 +4,11 @@
     require_once('connect.php');
     require_once('mod_functions.php');
 
+    if(isset($_REQUEST['message'])) {
+        $msg = $_REQUEST['message'];
+        echo "<script>alert('$msg');</script>";
+    }
+
     if(isset($_REQUEST['page'])) {
         $page = $_REQUEST['page'];
     } else $page = 'homepage.php';
