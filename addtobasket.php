@@ -1,6 +1,7 @@
 <?php
    session_start();
    require_once('connect.php');
+   require_once('mod_functions.php');
 
    $product_id = $_POST['id'];
    $amount = $_POST['amount'];
@@ -32,10 +33,10 @@
   
    $conn = null;
 
-   // Redirect to shop
-   $page = '?page=customer.php';
-   $host  = $_SERVER['HTTP_HOST'];
-   $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-   header("Location: http://$host$uri/$page");
-   exit;
+   redirect('?page=customer.php');
+   // $page = '?page=customer.php';
+   // $host  = $_SERVER['HTTP_HOST'];
+   // $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+   // header("Location: http://$host$uri/$page");
+   // exit;
 ?>

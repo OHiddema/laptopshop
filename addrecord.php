@@ -1,5 +1,6 @@
 <?php
    require_once('connect.php');
+   require_once('mod_functions.php');
 
    $brand = htmlspecialchars($_POST['brand']);
    $name = htmlspecialchars($_POST['name']);
@@ -22,10 +23,10 @@
   
    $conn = null;
 
-   // redirect
-   $page = '?page=viewall.php';
-   $host  = $_SERVER['HTTP_HOST'];
-   $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-   header("Location: http://$host$uri/$page");
-   exit;
+   redirect('?page=viewall.php');
+   // $page = '?page=viewall.php';
+   // $host  = $_SERVER['HTTP_HOST'];
+   // $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+   // header("Location: http://$host$uri/$page");
+   // exit;
 ?>

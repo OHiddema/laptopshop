@@ -1,6 +1,7 @@
 <?php
    session_start();
    require_once('connect.php');
+   require_once('mod_functions.php');
 
    $username = htmlspecialchars($_POST['username']);
    $password = $_POST['password'];
@@ -28,9 +29,9 @@
       $page = '?page=homepage.php';
    }
 
-   // redirect
-   $host  = $_SERVER['HTTP_HOST'];
-   $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-   header("Location: http://$host$uri/$page");
-   exit;
+   redirect($page);
+   // $host  = $_SERVER['HTTP_HOST'];
+   // $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+   // header("Location: http://$host$uri/$page");
+   // exit;
 ?>
