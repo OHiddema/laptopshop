@@ -12,14 +12,18 @@
    $password = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
 
    try {
-      $stmt = $conn->prepare('INSERT INTO customers (username, email, password) VALUES (:username, :email, :password)');
-      $stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]);
+      $stmt = $conn->prepare('SELECT * FROM customers WHERE username=:username OR email=:email');
+      $stmt->execute(['username' => $username, 'email' => $email]);
+      $row = $stmt->fetch(PDO::FETCH_ASSOC);
+      if (!$row) {
+         // both username and email are new
+         $stmt = $conn->prepare('INSERT INTO customers (username, email, password) VALUES (:username, :email, :password)');
+         $stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]);
+         redirect('?page=login.php');
+      } else {
+         redirect('?page=register.php&message=Username or email-address already exists!');
+      }
 
-      //New user is alaways accepted.
-      //To do: check if usename or email already exists in customer table
-      //If so: redirect to register page
-
-      redirect('?page=login.php');
       }
    catch(PDOException $e)
       {
