@@ -4,7 +4,7 @@
 
    $username = $_POST['username'];
    $email = $_POST['email'];
-   $password = $_POST['pass1'];
+   $password = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
 
    try {
       $stmt = $conn->prepare('INSERT INTO customers (username, email, password) VALUES (:username, :email, :password)');
