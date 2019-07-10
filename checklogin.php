@@ -3,7 +3,7 @@
    require_once('connect.php');
    require_once('mod_functions.php');
 
-   $username = htmlspecialchars($_POST['username']);
+   $username = $_POST['username'];
    $password = $_POST['password'];
 
    try {
